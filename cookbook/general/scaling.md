@@ -21,8 +21,8 @@ Below is an example of adding clustering to feathers with the `feathers-socketio
 
 ```js
 import cluster from 'cluster';
-import feathers from '@feathersjs/feathers';
-import socketio from '@feathersjs/socketio';
+import feathers from '@docs-dev/feathers';
+import socketio from '@docs-dev/socketio';
 
 const CLUSTER_COUNT = 4;
 
@@ -43,13 +43,13 @@ if (cluster.isMaster) {
 In your feathers client code, limit the socket.io-client to the `websocket` transport and disable `upgrade`.
 
 ```js
-import feathers from '@feathersjs/client';
-import socketio from '@feathersjs/socketio-client';
+import feathers from '@docs-dev/client';
+import socketio from '@docs-dev/socketio-client';
 import io from 'socket.io-client';
 
 const app = feathers()
   .configure(socketio(
-    io('http://api.feathersjs.com', {
+    io('http://api.docs-dev.com', {
       transports: ['websocket'],
       upgrade: false
     })

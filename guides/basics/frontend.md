@@ -2,7 +2,7 @@
 
 As we have seen [when getting started](./starting.md), Feathers works great in the browser and comes with client services that allow to easily connect to a Feathers server.
 
-In this chapter we will create a real-time chat frontend with signup and login using modern plain JavaScript. It will only work in the latest versions of Chrome, Firefox, Safari and Edge since we won't be using a transpiler like Webpack or Babel (which is also why there won't be a TypeScript option). The final version can be found [here](https://github.com/feathersjs/feathers-chat/).
+In this chapter we will create a real-time chat frontend with signup and login using modern plain JavaScript. It will only work in the latest versions of Chrome, Firefox, Safari and Edge since we won't be using a transpiler like Webpack or Babel (which is also why there won't be a TypeScript option). The final version can be found [here](https://github.com/docs-dev/feathers-chat/).
 
 ![The Feathers chat application](./assets/feathers-chat.png)
 
@@ -18,7 +18,7 @@ First, let's update `public/index.html` to initialize everything we need for the
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0" />
-    <title>FeathersJS chat</title>
+    <title>docs-dev chat</title>
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="//unpkg.com/feathers-chat@4.0.0/public/base.css">
     <link rel="stylesheet" href="//unpkg.com/feathers-chat@4.0.0/public/chat.css">
@@ -26,7 +26,7 @@ First, let's update `public/index.html` to initialize everything we need for the
   <body>
     <div id="app" class="flex flex-column"></div>
     <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.12.0/moment.js"></script>
-    <script src="//unpkg.com/@feathersjs/client@^4.3.0/dist/feathers.js"></script>
+    <script src="//unpkg.com/@docs-dev/client@^4.3.0/dist/feathers.js"></script>
     <script src="/socket.io/socket.io.js"></script>
     <script src="app.js"></script>
   </body>
@@ -101,7 +101,7 @@ const loginHTML = `<main class="login container">
 const chatHTML = `<main class="flex flex-column">
   <header class="title-bar flex flex-row flex-center">
     <div class="title-wrapper block center-element">
-      <img class="logo" src="http://feathersjs.com/img/feathers-logo-wide.png"
+      <img class="logo" src="http://docs-dev.com/img/feathers-logo-wide.png"
         alt="Feathers Logo">
       <span class="title">Chat</span>
     </div>
@@ -342,16 +342,16 @@ login();
 
 ## Using the chat application
 
-That’s it. We now have a plain JavaScript real-time chat frontend with login and signup. This example demonstrates many of the basic principles of how you interact with a Feathers API. You can log in with your GitHub account by following the "Login with GitHub" button, with the email (`hello@feathersjs.com`) and password (`supersecret`) from the user we registered in the [authentication chapter](./authentication.md) or sign up and log in with a different email address.
+That’s it. We now have a plain JavaScript real-time chat frontend with login and signup. This example demonstrates many of the basic principles of how you interact with a Feathers API. You can log in with your GitHub account by following the "Login with GitHub" button, with the email (`hello@docs-dev.com`) and password (`supersecret`) from the user we registered in the [authentication chapter](./authentication.md) or sign up and log in with a different email address.
 
 If you run into an issue, remember you can find the complete working example at
 
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab "JavaScript"
-The [feathersjs/feathers-chat](https://github.com/feathersjs/feathers-chat) repository
+The [docs-dev/feathers-chat](https://github.com/docs-dev/feathers-chat) repository
 :::
 ::: tab "TypeScript"
-The [feathersjs/feathers-chat-ts](https://github.com/feathersjs/feathers-chat-ts) repository
+The [docs-dev/feathers-chat-ts](https://github.com/docs-dev/feathers-chat-ts) repository
 :::
 ::::
 

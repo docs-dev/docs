@@ -4,16 +4,16 @@ This guide explains the new features and changes to migrate to the Feathers v4 (
 
 ## Versioning
 
-Instead of separate versioning, all modules in the `@feathersjs` namespace have been updated to use the same version number. This means that the current release (Crow) will be **Feathers v4** and using this release means all `@feathersjs/` module dependencies show a version of `4.x.x` (`4.0.0-pre.x` for prereleases). For historical reasons the first official version will be `4.3.0`.
+Instead of separate versioning, all modules in the `@docs-dev` namespace have been updated to use the same version number. This means that the current release (Crow) will be **Feathers v4** and using this release means all `@docs-dev/` module dependencies show a version of `4.x.x` (`4.0.0-pre.x` for prereleases). For historical reasons the first official version will be `4.3.0`.
 
 The [database adapters](../api/databases/adapters.md) will continue to be individually versioned, since they can be used with most Feathers versions from v2 and up.
 
 ## Auto upgrade
 
-The `@feathersjs/cli` comes with a command to automatically upgrade applications generated through `@feathersjs/cli` (v3.x) with most of the changes necessary for v4. To update the CLI and upgrade your application run:
+The `@docs-dev/cli` comes with a command to automatically upgrade applications generated through `@docs-dev/cli` (v3.x) with most of the changes necessary for v4. To update the CLI and upgrade your application run:
 
 ```
-npm i @feathersjs/cli -g
+npm i @docs-dev/cli -g
 cd myapp
 feathers upgrade
 ```
@@ -24,13 +24,13 @@ __Manual steps are necessary for__
 
 - The `hashPassword()` hook in `service/users/users.hooks.js` which now requires the password field name (usually `hashPassword('password')`)
 - Configuring oAuth providers - see [oAuth API](../api/authentication/oauth.md)
-- The authentication Express middleware has been moved to `const { authenticate } = require('@feathersjs/express');`
+- The authentication Express middleware has been moved to `const { authenticate } = require('@docs-dev/express');`
 - Any other authentication specific customization - see [authentication service API](../api/authentication/service.md)
 - Feathers client authentication - see [authentication client API](../api/authentication/client.md)
 
 ## Authentication
 
-The `@feathersjs/authentication-*` modules have been completely rewritten to include more secure defaults, be easier to customize, framework independent and no longer rely on PassportJS. It comes with:
+The `@docs-dev/authentication-*` modules have been completely rewritten to include more secure defaults, be easier to customize, framework independent and no longer rely on PassportJS. It comes with:
 
 - An extensible [authentication service](../api/authentication/service.md) that can register strategies and create authentication tokens (JWT by default but pluggable for anything else)
 - Protocol independent, fully customizable authentication strategies
@@ -45,9 +45,9 @@ To upgrade manually, replace the existing authentication configuration (usually 
 
 ::: tab "JavaScript"
 ```js
-const { AuthenticationService, JWTStrategy } = require('@feathersjs/authentication');
-const { LocalStrategy } = require('@feathersjs/authentication-local');
-const { expressOauth } = require('@feathersjs/authentication-oauth');
+const { AuthenticationService, JWTStrategy } = require('@docs-dev/authentication');
+const { LocalStrategy } = require('@docs-dev/authentication-local');
+const { expressOauth } = require('@docs-dev/authentication-oauth');
 
 module.exports = app => {
   const authentication = new AuthenticationService(app);
@@ -63,10 +63,10 @@ module.exports = app => {
 
 ::: tab "TypeScript"
 ```typescript
-import { Application } from '@feathersjs/feathers';
-import { AuthenticationService, JWTStrategy } from '@feathersjs/authentication';
-import { LocalStrategy } from '@feathersjs/authentication-local';
-import { expressOauth } from '@feathersjs/authentication-oauth';
+import { Application } from '@docs-dev/feathers';
+import { AuthenticationService, JWTStrategy } from '@docs-dev/authentication';
+import { LocalStrategy } from '@docs-dev/authentication-local';
+import { expressOauth } from '@docs-dev/authentication-oauth';
 
 export default (app: Application) => {
   const authentication = new AuthenticationService(app);
@@ -82,7 +82,7 @@ export default (app: Application) => {
 
 ::::
 
-> __Important:__ The `@feathersjs/authentication-jwt` is deprecated since the JWT strategy is now directly included in `@feathersjs/authentication`.
+> __Important:__ The `@docs-dev/authentication-jwt` is deprecated since the JWT strategy is now directly included in `@docs-dev/authentication`.
 
 This will register `local`, `jwt` and oAuth authentication strategies using the standard authentication service on the `/authentication` path. oAuth will only be active if provider information is added to the configuration. The authentication configuration (usually in `config/default.json`) should be updated as follows:
 
@@ -120,7 +120,7 @@ feathersClient.configure(rest('http://localhost:3030').superagent(superagent))
 
 feathersClient.authenticate({
   strategy: 'local',
-  email: 'admin@feathersjs.com',
+  email: 'admin@docs-dev.com',
   password: 'admin'
 })
 .then(response => {
@@ -152,7 +152,7 @@ async function authenticate() {
   try {
     const { user } = await feathersClient.authenticate({
       strategy: 'local',
-      email: 'admin@feathersjs.com',
+      email: 'admin@docs-dev.com',
       password: 'admin'
     });
     
@@ -195,7 +195,7 @@ The following new features and deprecations are included in Feathers v4 core.
 
 ### Typescript definitions included
 
-All `@feathersjs` modules now come with up-to-date TypeScript definitions. Any definitions using `@types/feathersjs__*` _should be removed_ from your project.
+All `@docs-dev` modules now come with up-to-date TypeScript definitions. Any definitions using `@types/docs-dev__*` _should be removed_ from your project.
 
 ### Services at the root level
 
@@ -232,7 +232,7 @@ app.on('disconnect', connection => {
 
 ### Deprecated `(context, next)` and SKIP functionality
 
-In preparation to support Koa style hooks (see [feathersjs/feathers#932](https://github.com/feathersjs/feathers/issues/932)) returning `SKIP` and calling the deprecated `next` function in hooks has been removed. Returning `SKIP` in hooks was causing issues because
+In preparation to support Koa style hooks (see [docs-dev/feathers#932](https://github.com/docs-dev/feathers/issues/932)) returning `SKIP` and calling the deprecated `next` function in hooks has been removed. Returning `SKIP` in hooks was causing issues because
 
 - It is not easily possible to see if a hook makes its following hooks skip. This made hook chains very hard to debug.
 - Returning SKIP also causes problems with Feathers internals like the event system
@@ -243,16 +243,16 @@ The use-cases for `feathers.SKIP` can now be explicitly handled by
 - [Calling the hook-less service methods](#hook-less-service-methods) of the database adapters
 - Setting `context.event = null` to skip event emitting
 
-### `@feathersjs/express`
+### `@docs-dev/express`
 
-- `@feathersjs/express/errors` has been moved to `const { errorHandler } = require('@feathersjs/express');`. It is no longer available via `@feathersjs/errors`.
-- `@feathersjs/express/not-found` has been moved to `const { notFound } = require('@feathersjs/express');`.
+- `@docs-dev/express/errors` has been moved to `const { errorHandler } = require('@docs-dev/express');`. It is no longer available via `@docs-dev/errors`.
+- `@docs-dev/express/not-found` has been moved to `const { notFound } = require('@docs-dev/express');`.
 
 ## Database adapters
 
 The latest versions of the Feathers database adapters include some important security and usability updates by requiring to explicitly enable certain functionality that was previously available by default.
 
-> __Important:__ The latest versions of the database adapters also work with previous versions of Feathers. An upgrade of the `@feathersjs/` modules is recommended but not necessary to use the latest database adapter features.
+> __Important:__ The latest versions of the database adapters also work with previous versions of Feathers. An upgrade of the `@docs-dev/` modules is recommended but not necessary to use the latest database adapter features.
 
 ### Querying by id
 
@@ -334,9 +334,9 @@ For security reasons, the authentication secret should be changed so that all cu
 Although upgrading the clients and issuing new tokens is highly recommended, the following setup can be used to provide backwards compatible authentication:
 
 ```js
-const { AuthenticationService, JWTStrategy } = require('@feathersjs/authentication');
-const { LocalStrategy } = require('@feathersjs/authentication-local');
-const { expressOauth } = require('@feathersjs/authentication-oauth');
+const { AuthenticationService, JWTStrategy } = require('@docs-dev/authentication');
+const { LocalStrategy } = require('@docs-dev/authentication-local');
+const { expressOauth } = require('@docs-dev/authentication-oauth');
 
 class MyAuthenticationService extends AuthenticationService {
   async getPayload(authResult, params) {

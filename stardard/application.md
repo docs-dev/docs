@@ -1,16 +1,16 @@
 # Application
 
 [![npm version](https://img.shields.io/npm/v/feathers.svg?style=flat-square)](https://www.npmjs.com/package/feathers)
-[![Changelog](https://img.shields.io/badge/changelog-.md-blue.svg?style=flat-square)](https://github.com/feathersjs/feathers/blob/master/packages/feathers/CHANGELOG.md)
+[![Changelog](https://img.shields.io/badge/changelog-.md-blue.svg?style=flat-square)](https://github.com/docs-dev/feathers/blob/master/packages/feathers/CHANGELOG.md)
 
 ```
-$ npm install @feathersjs/feathers --save
+$ npm install @docs-dev/feathers --save
 ```
 
-The core `@feathersjs/feathers` module provides the ability to initialize a new Feathers application instance. It works in Node, React Native and the browser (see the [client](./client.md) chapter for more information). Each instance allows for registration and retrieval of [services](./services.md), [hooks](./hooks.md), plugin configuration, and getting and setting configuration options. An initialized Feathers application is referred to as the **app object**.
+The core `@docs-dev/feathers` module provides the ability to initialize a new Feathers application instance. It works in Node, React Native and the browser (see the [client](./client.md) chapter for more information). Each instance allows for registration and retrieval of [services](./services.md), [hooks](./hooks.md), plugin configuration, and getting and setting configuration options. An initialized Feathers application is referred to as the **app object**.
 
 ```js
-const feathers = require('@feathersjs/feathers');
+const feathers = require('@docs-dev/feathers');
 
 const app = feathers();
 ```
@@ -133,7 +133,7 @@ Provided by the core [NodeJS EventEmitter .removeListener](https://nodejs.org/ap
 `app.mixins` contains a list of service mixins. A mixin is a callback (`(service, path) => {}`) that gets run for every service that is being registered. Adding your own mixins allows to add functionality to every registered service.
 
 ```js
-const feathers = require('@feathersjs/feathers');
+const feathers = require('@docs-dev/feathers');
 const app = feathers();
 
 // Mixins have to be added before registering any services

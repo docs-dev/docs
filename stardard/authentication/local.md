@@ -1,18 +1,18 @@
 # Local
 
-[![npm version](https://img.shields.io/npm/v/@feathersjs/authentication-local.svg?style=flat-square)](https://www.npmjs.com/package/@feathersjs/authentication-local)
-[![Changelog](https://img.shields.io/badge/changelog-.md-blue.svg?style=flat-square)](https://github.com/feathersjs/feathers/blob/master/packages/authentication-local/CHANGELOG.md)
+[![npm version](https://img.shields.io/npm/v/@docs-dev/authentication-local.svg?style=flat-square)](https://www.npmjs.com/package/@docs-dev/authentication-local)
+[![Changelog](https://img.shields.io/badge/changelog-.md-blue.svg?style=flat-square)](https://github.com/docs-dev/feathers/blob/master/packages/authentication-local/CHANGELOG.md)
 
 ```
-$ npm install @feathersjs/authentication-local --save
+$ npm install @docs-dev/authentication-local --save
 ```
 
-`@feathersjs/authentication-local` provides a `LocalStrategy` for authenticating with a username/email and password combination, e.g.
+`@docs-dev/authentication-local` provides a `LocalStrategy` for authenticating with a username/email and password combination, e.g.
 
 ```json
 {
   "strategy": "local",
-  "email": "hello@feathersjs.com",
+  "email": "hello@docs-dev.com",
   "password": "supersecret"
 }
 ```
@@ -79,8 +79,8 @@ The `LocalStrategy` can be customized like any ES6 class and then registered on 
 
 ::: tab "JavaScript"
 ```js
-const { AuthenticationService, JWTStrategy } = require('@feathersjs/authentication');
-const { LocalStrategy } = require('@feathersjs/authentication-local');
+const { AuthenticationService, JWTStrategy } = require('@docs-dev/authentication');
+const { LocalStrategy } = require('@docs-dev/authentication-local');
 
 class MyLocalStrategy extends LocalStrategy {
   async getEntityQuery(query, params) {
@@ -106,9 +106,9 @@ module.exports = app => {
 
 ::: tab "TypeScript"
 ```typescript
-import { Application, Params, Query } from '@feathersjs/feathers';
-import { AuthenticationService, JWTStrategy } from '@feathersjs/authentication';
-import { LocalStrategy } from '@feathersjs/authentication-local';
+import { Application, Params, Query } from '@docs-dev/feathers';
+import { AuthenticationService, JWTStrategy } from '@docs-dev/authentication';
+import { LocalStrategy } from '@docs-dev/authentication-local';
 
 class MyLocalStrategy extends LocalStrategy {
   async getEntityQuery(query: Query, params: Params) {

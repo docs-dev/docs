@@ -3,10 +3,10 @@
 In the [getting started chapter](./starting.md) we created a Feathers application in a single file to get a better understanding how Feathers itself works. The Feathers CLI allows us to initialize a new Feathers server with a recommended structure and helps with generating things we commonly need like authentication, a database connection, new services or hooks (more about hooks in a little bit). It can be installed via:
 
 ```sh
-npm install @feathersjs/cli -g
+npm install @docs-dev/cli -g
 ```
 
-> __Important:__ As mentioned when [getting ready](./starting.md),  `@feathersjs/cli` also requires Node version 10 or later. If you already have it installed, `feathers --version` should show `4.1.0` or later.
+> __Important:__ As mentioned when [getting ready](./starting.md),  `@docs-dev/cli` also requires Node version 10 or later. If you already have it installed, `feathers --version` should show `4.1.0` or later.
 
 ## Generating the application
 

@@ -56,7 +56,7 @@ Additionally to the event `data`, all events also get the [hook context](./hooks
 The `created` event will fire with the result data when a service `create` returns successfully.
 
 ```js
-const feathers = require('@feathersjs/feathers');
+const feathers = require('@docs-dev/feathers');
 const app = feathers();
 
 app.use('/messages', {
@@ -80,7 +80,7 @@ messages.create({
 The `updated` and `patched` events will fire with the callback data when a service `update` or `patch` method calls back successfully.
 
 ```js
-const feathers = require('@feathersjs/feathers');
+const feathers = require('@docs-dev/feathers');
 const app = feathers();
 
 app.use('/my/messages/', {
@@ -112,7 +112,7 @@ messages.patch(0, {
 The `removed` event will fire with the callback data when a service `remove` calls back successfully.
 
 ```js
-const feathers = require('@feathersjs/feathers');
+const feathers = require('@docs-dev/feathers');
 const app = feathers();
 
 app.use('/messages', {

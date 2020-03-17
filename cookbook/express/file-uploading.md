@@ -1,4 +1,4 @@
-# File uploads in FeathersJS
+# File uploads in docs-dev
 
 Over the last months we at [ciancoders.com](https://ciancoders.com/) have been working in a new SPA project using Feathers and React, the combination of those two turns out to be **just amazing**.  
 
@@ -16,7 +16,7 @@ We want to implement an upload service to accomplish a few important things:
 
 The plan is to upload the files to a feathers service so we can take advantage of hooks for authentication, authorization and validation, and for service events.
 
-Fortunately, there exists a file storage service: [feathers-blob](https://github.com/feathersjs/feathers-blob). With it we can meet our goals, but (spoiler alert) it isn't an ideal solution.  We discuss some of its problems below.
+Fortunately, there exists a file storage service: [feathers-blob](https://github.com/docs-dev/feathers-blob). With it we can meet our goals, but (spoiler alert) it isn't an ideal solution.  We discuss some of its problems below.
 
 
 ## Basic upload with feathers-blob and feathers-client
@@ -28,8 +28,8 @@ Lets look at the server code:
 ```javascript
 /* --- server.js --- */
 
-const feathers = require('@feathersjs/feathers');
-const express = require('@feathersjs/express');
+const feathers = require('@docs-dev/feathers');
+const express = require('@docs-dev/express');
 const socketio = require('feathers-socketio');
 
 // feathers-blob service
@@ -67,7 +67,7 @@ app.listen(3030, function(){
 });
 ```
 
-Let's look at this implemented in the `@feathersjs/cli` generated server code:
+Let's look at this implemented in the `@docs-dev/cli` generated server code:
 
 ```javascript
 /* --- /src/services/uploads/uploads.service.js --- */
@@ -136,7 +136,7 @@ Or we can implement a very basic frontend with `feathers-client` and `jQuery`:
 <!doctype html>
 <html>
     <head>
-        <title>Feathersjs File Upload</title>
+        <title>docs-dev File Upload</title>
         <script   src='https://code.jquery.com/jquery-2.2.3.min.js'   integrity='sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo='   crossorigin='anonymous'></script>
         <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/core-js/2.1.4/core.min.js'></script>
         <script type='text/javascript' src='//unpkg.com/feathers-client@^2.0.0/dist/feathers.js'></script>
@@ -266,7 +266,7 @@ app.service('/uploads').before({
 });
 ```
 
-*Et voilà!*. Now we have a FeathersJS file storage service working, with support for traditional multipart uploads, and a variety of storage options to choose.
+*Et voilà!*. Now we have a docs-dev file storage service working, with support for traditional multipart uploads, and a variety of storage options to choose.
 
 **Simply awesome.**
 
@@ -275,7 +275,7 @@ app.service('/uploads').before({
 
 The service always returns the dataURI back to us, which may not be necessary as we just uploaded the file. We also need to validate the file and check for authorization.
 
-All those things can be easily done with more Hooks, and that's the benefit of keeping all inside FeathersJS services. I leave that to you.
+All those things can be easily done with more Hooks, and that's the benefit of keeping all inside docs-dev services. I leave that to you.
 
 For the frontend, there is a problem with the client: in order to show the upload progress it's stuck with only REST functionality and not real-time with socket.io.
 
@@ -287,7 +287,7 @@ Here is an example using dropzone:
 <!doctype html>
 <html>
     <head>
-        <title>Feathersjs File Upload</title>
+        <title>docs-dev File Upload</title>
 
         <link rel='stylesheet' href='assets/dropzone.css'>
         <script src='assets/dropzone.js'></script>

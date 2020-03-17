@@ -31,9 +31,9 @@ To use Auth0 in the chat application from the [Feathers guide](../../guides/) we
 In `src/authentication.js` like this:
 
 ```js
-const { AuthenticationService, JWTStrategy } = require('@feathersjs/authentication');
-const { LocalStrategy } = require('@feathersjs/authentication-local');
-const { expressOauth, OAuthStrategy } = require('@feathersjs/authentication-oauth');
+const { AuthenticationService, JWTStrategy } = require('@docs-dev/authentication');
+const { LocalStrategy } = require('@docs-dev/authentication-local');
+const { expressOauth, OAuthStrategy } = require('@docs-dev/authentication-oauth');
 
 class Auth0Strategy extends OAuthStrategy {
   async getEntityData(profile) {
@@ -62,10 +62,10 @@ module.exports = app => {
 In `src/authentication.ts` like this:
 
 ```ts
-import { ServiceAddons, Params } from '@feathersjs/feathers';
-import { AuthenticationService, JWTStrategy } from '@feathersjs/authentication';
-import { LocalStrategy } from '@feathersjs/authentication-local';
-import { expressOauth, OAuthStrategy, OAuthProfile } from '@feathersjs/authentication-oauth';
+import { ServiceAddons, Params } from '@docs-dev/feathers';
+import { AuthenticationService, JWTStrategy } from '@docs-dev/authentication';
+import { LocalStrategy } from '@docs-dev/authentication-local';
+import { expressOauth, OAuthStrategy, OAuthProfile } from '@docs-dev/authentication-oauth';
 
 import { Application } from './declarations';
 

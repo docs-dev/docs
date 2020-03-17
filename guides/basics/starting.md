@@ -32,13 +32,13 @@ tsc --init --target es2018
 
 ## Installing Feathers
 
-Feathers can be installed like any other Node module by installing the [@feathersjs/feathers](https://www.npmjs.com/package/@feathersjs/feathers) package through [npm](https://www.npmjs.com). The same package can also be used with a module loader like Webpack or Browserify and in React Native.
+Feathers can be installed like any other Node module by installing the [@docs-dev/feathers](https://www.npmjs.com/package/@docs-dev/feathers) package through [npm](https://www.npmjs.com). The same package can also be used with a module loader like Webpack or Browserify and in React Native.
 
 ```sh
-npm install @feathersjs/feathers --save
+npm install @docs-dev/feathers --save
 ```
 
-> __Note:__ All Feathers core modules are in the `@feathersjs` namespace.
+> __Note:__ All Feathers core modules are in the `@docs-dev` namespace.
 
 ## Our first app
 
@@ -49,7 +49,7 @@ Now we can create a Feathers application with a simple messages service that all
 Create a file called `app.js` with the following content:
 
 ```js
-const feathers = require('@feathersjs/feathers');
+const feathers = require('@docs-dev/feathers');
 const app = feathers();
 
 // A messages service that allows to create new
@@ -112,7 +112,7 @@ main();
 Create a file called `app.ts` with the following content:
 
 ```ts
-import feathers from '@feathersjs/feathers';
+import feathers from '@docs-dev/feathers';
 
 // This is the interface for the message data
 interface Message {
@@ -211,11 +211,11 @@ Ok, so we created a Feathers application and a service and we are listening to e
 
 In the following example we will take our existing service and use
 
-- `@feathersjs/express` which uses Express to automatically turn our services into a REST API
-- `@feathersjs/socketio` which uses Socket.io to do the same as a websocket real-time API (as we will see in a bit this is where the `created` event we saw above comes in handy)
+- `@docs-dev/express` which uses Express to automatically turn our services into a REST API
+- `@docs-dev/socketio` which uses Socket.io to do the same as a websocket real-time API (as we will see in a bit this is where the `created` event we saw above comes in handy)
 
 ```sh
-npm install @feathersjs/socketio @feathersjs/express --save
+npm install @docs-dev/socketio @docs-dev/express --save
 ```
 
 :::: tabs :options="{ useUrlFragment: false }"
@@ -224,9 +224,9 @@ npm install @feathersjs/socketio @feathersjs/express --save
 Update `app.js` with the following content:
 
 ```js
-const feathers = require('@feathersjs/feathers');
-const express = require('@feathersjs/express');
-const socketio = require('@feathersjs/socketio');
+const feathers = require('@docs-dev/feathers');
+const express = require('@docs-dev/express');
+const socketio = require('@docs-dev/socketio');
 
 // A messages service that allows to create new
 // and return all existing messages
@@ -297,10 +297,10 @@ app.service('messages').create({
 Update `app.ts` with the following content:
 
 ```js
-import feathers from '@feathersjs/feathers';
-import '@feathersjs/transport-commons';
-import express from '@feathersjs/express';
-import socketio from '@feathersjs/socketio';
+import feathers from '@docs-dev/feathers';
+import '@docs-dev/transport-commons';
+import express from '@docs-dev/express';
+import socketio from '@docs-dev/socketio';
 
 // This is the interface for the message data
 interface Message {
@@ -419,7 +419,7 @@ Now we can look at one of the really cool features of Feathers. It works the sam
     <h2>Here are the current messages:</h2>
   </main>
 
-  <script src="//unpkg.com/@feathersjs/client@^4.3.0/dist/feathers.js"></script>
+  <script src="//unpkg.com/@docs-dev/client@^4.3.0/dist/feathers.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
   <script type="text/javascript">
     // Set up socket.io

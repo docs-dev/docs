@@ -4,7 +4,7 @@ Hooks are pluggable middleware functions that can be registered __before__, __af
 
 A hook is **transport independent**, which means it does not matter if it has been called through HTTP(S) (REST), Socket.io, Primus or any other transport Feathers may support in the future. They are also service agnostic, meaning they can be used with ​**any**​ service regardless of whether they have a model or not.
 
-Hooks are commonly used to handle things like validation, logging, populating related entities, sending notifications and more. This pattern keeps your application logic flexible, composable, and much easier to trace through and debug. For more information about the design patterns behind hooks see [this blog post](https://blog.feathersjs.com/api-service-composition-with-hooks-47af13aa6c01).
+Hooks are commonly used to handle things like validation, logging, populating related entities, sending notifications and more. This pattern keeps your application logic flexible, composable, and much easier to trace through and debug. For more information about the design patterns behind hooks see [this blog post](https://blog.docs-dev.com/api-service-composition-with-hooks-47af13aa6c01).
 
 ## Quick Example
 
@@ -14,7 +14,7 @@ The following example adds a `createdAt` and `updatedAt` property before saving 
 
 ::: tab "JavaScript"
 ```js
-const feathers = require('@feathersjs/feathers');
+const feathers = require('@docs-dev/feathers');
 
 const app = feathers();
 
@@ -51,7 +51,7 @@ app.service('messages').hooks({
 
 ::: tab "TypeScript"
 ```js
-import { default as feathers, HookContext } from '@feathersjs/feathers';
+import { default as feathers, HookContext } from '@docs-dev/feathers';
 
 const app = feathers();
 

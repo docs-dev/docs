@@ -1,13 +1,13 @@
 # Client
 
-[![npm version](https://img.shields.io/npm/v/@feathersjs/authentication-client.svg?style=flat-square)](https://www.npmjs.com/package/@feathersjs/authentication-client)
-[![Changelog](https://img.shields.io/badge/changelog-.md-blue.svg?style=flat-square)](https://github.com/feathersjs/feathers/blob/master/packages/authentication-client/CHANGELOG.md)
+[![npm version](https://img.shields.io/npm/v/@docs-dev/authentication-client.svg?style=flat-square)](https://www.npmjs.com/package/@docs-dev/authentication-client)
+[![Changelog](https://img.shields.io/badge/changelog-.md-blue.svg?style=flat-square)](https://github.com/docs-dev/feathers/blob/master/packages/authentication-client/CHANGELOG.md)
 
 ```
-npm install @feathersjs/authentication-client --save
+npm install @docs-dev/authentication-client --save
 ```
 
-The `@feathersjs/authentication-client` module allows you to easily authenticate against a Feathers server. It is not required, but makes it easier to implement authentication in your client by automatically storing and sending the access token and handling re-authenticating when a websocket disconnects.
+The `@docs-dev/authentication-client` module allows you to easily authenticate against a Feathers server. It is not required, but makes it easier to implement authentication in your client by automatically storing and sending the access token and handling re-authenticating when a websocket disconnects.
 
 ## Configuration
 
@@ -24,12 +24,12 @@ The `@feathersjs/authentication-client` module allows you to easily authenticate
 ## Setup
 
 ```js
-const feathers = require('@feathersjs/feathers');
-const socketio = require('@feathersjs/socketio-client');
+const feathers = require('@docs-dev/feathers');
+const socketio = require('@docs-dev/socketio-client');
 const io = require('socket.io-client');
-const auth = require('@feathersjs/authentication-client');
+const auth = require('@docs-dev/authentication-client');
 
-const socket = io('http://api.feathersjs.com');
+const socket = io('http://api.docs-dev.com');
 const app = feathers();
 
 // Setup the transport (Rest, Socket, etc.) here
@@ -154,12 +154,12 @@ The internal method called when using [app.logout()](#app-logout).
 The [AuthenticationClient]() can be extended to provide custom functionality and then passed during initialization:
 
 ```js
-const feathers = require('@feathersjs/feathers');
-const socketio = require('@feathersjs/socketio-client');
+const feathers = require('@docs-dev/feathers');
+const socketio = require('@docs-dev/socketio-client');
 const io = require('socket.io-client');
-const auth = require('@feathersjs/authentication-client');
+const auth = require('@docs-dev/authentication-client');
 
-const socket = io('http://api.feathersjs.com');
+const socket = io('http://api.docs-dev.com');
 const app = feathers();
 
 class MyAuthenticationClient extends auth.AuthenticationClient {

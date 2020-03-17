@@ -10,13 +10,13 @@ This makes applications easier to understand and test and it allows Feathers to 
 
 For more information
 
-- [Read about the philosophy behind Feathers and where it came from](https://blog.feathersjs.com/why-we-built-the-best-web-framework-you-ve-probably-never-heard-of-until-now-176afc5c6aac)
-- [Learn about the high level design patterns behind Feathers](https://blog.feathersjs.com/design-patterns-for-modern-web-apis-1f046635215)
-- [See how Feathers compares to others](https://feathersjs.com/comparison)
+- [Read about the philosophy behind Feathers and where it came from](https://blog.docs-dev.com/why-we-built-the-best-web-framework-you-ve-probably-never-heard-of-until-now-176afc5c6aac)
+- [Learn about the high level design patterns behind Feathers](https://blog.docs-dev.com/design-patterns-for-modern-web-apis-1f046635215)
+- [See how Feathers compares to others](https://docs-dev.com/comparison)
 
 ## Is Feathers production ready?
 
-Yes! Feathers had its first stable release in 2014 and is being used in production by a bunch of companies from startups to fortune 500s. For some more details see [this answer on Quora](https://www.quora.com/Is-FeathersJS-production-ready).
+Yes! Feathers had its first stable release in 2014 and is being used in production by a bunch of companies from startups to fortune 500s. For some more details see [this answer on Quora](https://www.quora.com/Is-docs-dev-production-ready).
 
 ## What Node versions does Feathers support
 
@@ -156,11 +156,11 @@ Feathers [database adapters](../api/databases/adapters.md) implement 90% of the 
 
 The why and how to write your own services is covered [in the Feathers guide](../guides/). In the generator a custom service can be created by running `feathers generate service`, choosing "A custom service" and then editing the `<servicename>/<servicename>.class.js` file to make the appropriate database calls.
 
-If you would like to publish your own database adapter, first make sure there isn't already a [community maintained adapter](https://github.com/feathersjs/awesome-feathersjs#database) for that database (many maintainers are happy to get some help, too). If not, you can run `feathers generate plugin` to create a new plugin. A reference implementation for a database adapter can be found in the [feathers-memory repository](https://github.com/feathersjs-ecosystem/feathers-memory). It is always possible for community maintained adapters to graduate into an _official_ Feathers adapter, at the moment there are however no plans to add support for any new databases from the Feathers team directly.
+If you would like to publish your own database adapter, first make sure there isn't already a [community maintained adapter](https://github.com/docs-dev/awesome-docs-dev#database) for that database (many maintainers are happy to get some help, too). If not, you can run `feathers generate plugin` to create a new plugin. A reference implementation for a database adapter can be found in the [feathers-memory repository](https://github.com/docs-dev-ecosystem/feathers-memory). It is always possible for community maintained adapters to graduate into an _official_ Feathers adapter, at the moment there are however no plans to add support for any new databases from the Feathers team directly.
 
 ## I am not getting real-time events
 
-Feathers v3 (`@feathersjs/feathers@v3.0.0`) introduced a more secure event system that does __not__ send real-time events by default. If you are not getting real-time events on the client, it is usually a problem with the [event channel](../api/channels.md) setup.
+Feathers v3 (`@docs-dev/feathers@v3.0.0`) introduced a more secure event system that does __not__ send real-time events by default. If you are not getting real-time events on the client, it is usually a problem with the [event channel](../api/channels.md) setup.
 
 Have a look a the [quick start](../guides/basics/starting.md) and the [channels documentation](../api/channels.md).
 
@@ -172,7 +172,7 @@ This depends on the database adapter you are using. See [the search querying cha
 
 ## Why am I not getting JSON errors?
 
-If you get a plain text error and a 500 status code for errors that should return different status codes, make sure you have the `express.errorHandler()` from the `@feathersjs/express` module configured as described in the [Express errors](../api/express.md#expresserrorhandler) chapter.
+If you get a plain text error and a 500 status code for errors that should return different status codes, make sure you have the `express.errorHandler()` from the `@docs-dev/express` module configured as described in the [Express errors](../api/express.md#expresserrorhandler) chapter.
 
 ## Why am I not getting the correct HTTP error code
 
@@ -206,7 +206,7 @@ If you don't have a model or schema then validating with hooks is currently your
 
 With ORM adapters you can perform validation at the model level:
 
-- [Using Mongoose](https://github.com/feathersjs-ecosystem/feathers-mongoose#validation)
+- [Using Mongoose](https://github.com/docs-dev-ecosystem/feathers-mongoose#validation)
 - [Using Sequelize](http://docs.sequelizejs.com/en/latest/docs/models-definition/#validations)
 
 The nice thing about the model level validations is Feathers will return the validation errors to the client in a nice consistent format for you.
@@ -250,11 +250,11 @@ app.service('user').find({
 });
 ```
 
-Or set it in a hook as [described here](https://github.com/feathersjs-ecosystem/feathers-sequelize#associations-and-relations).
+Or set it in a hook as [described here](https://github.com/docs-dev-ecosystem/feathers-sequelize#associations-and-relations).
 
 ## Sequelize models and associations
 
-If you are using the [Sequelize](http://docs.sequelizejs.com/) adapter, understanding SQL and Sequelize first is very important. See the [associations section in the feathers-sequelize documentation](https://github.com/feathersjs-ecosystem/feathers-sequelize#associations) for more information on how to associate models using the Sequelize Feathers adapter.
+If you are using the [Sequelize](http://docs.sequelizejs.com/) adapter, understanding SQL and Sequelize first is very important. See the [associations section in the feathers-sequelize documentation](https://github.com/docs-dev-ecosystem/feathers-sequelize#associations) for more information on how to associate models using the Sequelize Feathers adapter.
 
 ## How do I access the request object in hooks or services?
 
@@ -288,7 +288,7 @@ async context => {
 
 ## How do I debug my app
 
-It's really no different than debugging any other NodeJS app but you can refer to [this blog post](https://blog.feathersjs.com/debugging-feathers-with-visual-studio-code-406e6adf2882) for more Feathers specific tips and tricks.
+It's really no different than debugging any other NodeJS app but you can refer to [this blog post](https://blog.docs-dev.com/debugging-feathers-with-visual-studio-code-406e6adf2882) for more Feathers specific tips and tricks.
 
 ## `possible EventEmitter memory leak detected` warning
 
@@ -365,7 +365,7 @@ app.service('myservice').hooks({
 });
 ```
 
-Also see [this issue](https://github.com/feathersjs/feathers/issues/894).
+Also see [this issue](https://github.com/docs-dev/feathers/issues/894).
 
 > __Note:__ This issue does not happen when using websockets since it retains all type information.
 
@@ -383,7 +383,7 @@ app.set('query parser', function (str) {
 });
 ```
 
-For more information see the [Express application settings](http://expressjs.com/en/4x/api.html#app.set) [@feathersjs/rest#88](https://github.com/feathersjs/feathers-rest/issues/88) and [feathers-mongoose#205](https://github.com/feathersjs-ecosystem/feathers-mongoose/issues/205).
+For more information see the [Express application settings](http://expressjs.com/en/4x/api.html#app.set) [@docs-dev/rest#88](https://github.com/docs-dev/feathers-rest/issues/88) and [feathers-mongoose#205](https://github.com/docs-dev-ecosystem/feathers-mongoose/issues/205).
 
 ## I always get a 404 for my custom middleware
 

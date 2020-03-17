@@ -18,14 +18,14 @@ In the next parts we will [generate an application](./basics/generator.md) and t
 
 [The cookbook for common tasks and patterns >](../cookbook/readme.md)
 
-[The Awesome FeathersJS Ecosystem >](https://github.com/feathersjs/awesome-feathersjs)
+[The Awesome docs-dev Ecosystem >](https://github.com/docs-dev/awesome-docs-dev)
 
 [Feathers on YouTube >](https://www.youtube.com/playlist?list=PLwSdIiqnDlf_lb5y1liQK2OW5daXYgKOe)
 
 ## More about Feathers how and why
 
-[Read about the philosophy behind Feathers and where it came from >](https://blog.feathersjs.com/why-we-built-the-best-web-framework-you-ve-probably-never-heard-of-until-now-176afc5c6aac)
+[Read about the philosophy behind Feathers and where it came from >](https://blog.docs-dev.com/why-we-built-the-best-web-framework-you-ve-probably-never-heard-of-until-now-176afc5c6aac)
 
-[Learn about the high level design patterns behind Feathers >](https://blog.feathersjs.com/design-patterns-for-modern-web-apis-1f046635215)
+[Learn about the high level design patterns behind Feathers >](https://blog.docs-dev.com/design-patterns-for-modern-web-apis-1f046635215)
 
-[See how Feathers compares to others >](https://feathersjs.com/comparison)
+[See how Feathers compares to others >](https://docs-dev.com/comparison)

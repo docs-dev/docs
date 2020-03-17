@@ -30,7 +30,7 @@ Stateless tokens can be issued by setting the `entity` option in the [JWT strate
 In order for the token to contain information, the `getPayload` method needs to be customize by [extending the authentication service](../../api/authentication/service.md#customization):
 
 ```js
-const { AuthenticationService } = require('@feathersjs/authentication');
+const { AuthenticationService } = require('@docs-dev/authentication');
 
 class MyAuthService extends AuthenticationService {
   async getPayload(authResult, params) {

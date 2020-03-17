@@ -1,13 +1,13 @@
 # Errors
 
-[![npm version](https://img.shields.io/npm/v/@feathersjs/errors.svg?style=flat-square)](https://www.npmjs.com/package/@feathersjs/errors)
-[![Changelog](https://img.shields.io/badge/changelog-.md-blue.svg?style=flat-square)](https://github.com/feathersjs/feathers/blob/master/packages/errors/CHANGELOG.md)
+[![npm version](https://img.shields.io/npm/v/@docs-dev/errors.svg?style=flat-square)](https://www.npmjs.com/package/@docs-dev/errors)
+[![Changelog](https://img.shields.io/badge/changelog-.md-blue.svg?style=flat-square)](https://github.com/docs-dev/feathers/blob/master/packages/errors/CHANGELOG.md)
 
 ```
-$ npm install @feathersjs/errors --save
+$ npm install @docs-dev/errors --save
 ```
 
-The `@feathersjs/errors` module contains a set of standard error classes used by all other Feathers modules.
+The `@docs-dev/errors` module contains a set of standard error classes used by all other Feathers modules.
 
 ## Examples
 
@@ -17,7 +17,7 @@ Here are a few ways that you can use them:
 
 ::: tab "JavaScript"
 ```js
-const { NotFound, GeneralError, BadRequest } = require('@feathersjs/errors');
+const { NotFound, GeneralError, BadRequest } = require('@docs-dev/errors');
 
 // If you were to create an error yourself.
 const notFound = new NotFound('User does not exist');
@@ -51,7 +51,7 @@ const validationErrors = new BadRequest({
 
 ::: tab "TypeScript"
 ```ts
-import { NotFound, GeneralError, BadRequest } from '@feathersjs/errors';
+import { NotFound, GeneralError, BadRequest } from '@docs-dev/errors';
 
 // If you were to create an error yourself.
 const notFound = new NotFound('User does not exist');
@@ -131,7 +131,7 @@ You can create custom errors by extending from the `FeathersError` class and cal
 
 
 ```js
-const { FeathersError } = require('@feathersjs/errors');
+const { FeathersError } = require('@docs-dev/errors');
 
 class UnsupportedMediaType extends FeathersError {
   constructor(message, data) {
@@ -155,12 +155,12 @@ process.on('unhandledRejection', (reason, p) => {
 ```
 ## Error Handling
 
-It is important to make sure that errors get cleaned up before they go back to the client. [Express error handling middleware](https://docs.feathersjs.com/api/express.html#expresserrorhandler) works only for REST calls. If you want to make sure that ws errors are handled as well, you need to use [App Hooks](https://docs.feathersjs.com/guides/basics/hooks.html#application-hooks). App Error Hooks get called on an error to every service call regardless of transport.
+It is important to make sure that errors get cleaned up before they go back to the client. [Express error handling middleware](https://docs.docs-dev.com/api/express.html#expresserrorhandler) works only for REST calls. If you want to make sure that ws errors are handled as well, you need to use [App Hooks](https://docs.docs-dev.com/guides/basics/hooks.html#application-hooks). App Error Hooks get called on an error to every service call regardless of transport.
 
 Here is an example error handler you can add to app.hooks errors.
 
 ```
-const errors = require("@feathersjs/errors");
+const errors = require("@docs-dev/errors");
 const errorHandler = ctx => {
   if (ctx.error) {
     const error = ctx.error;

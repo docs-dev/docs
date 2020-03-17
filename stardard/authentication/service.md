@@ -1,10 +1,10 @@
 # Service
 
-[![npm version](https://img.shields.io/npm/v/@feathersjs/authentication.svg?style=flat-square)](https://www.npmjs.com/package/@feathersjs/authentication)
-[![Changelog](https://img.shields.io/badge/changelog-.md-blue.svg?style=flat-square)](https://github.com/feathersjs/feathers/blob/master/packages/authentication/CHANGELOG.md)
+[![npm version](https://img.shields.io/npm/v/@docs-dev/authentication.svg?style=flat-square)](https://www.npmjs.com/package/@docs-dev/authentication)
+[![Changelog](https://img.shields.io/badge/changelog-.md-blue.svg?style=flat-square)](https://github.com/docs-dev/feathers/blob/master/packages/authentication/CHANGELOG.md)
 
 ```
-$ npm install @feathersjs/authentication --save
+$ npm install @docs-dev/authentication --save
 ```
 
 The `AuthenticationService` is a [Feathers service](../services.md) that allows to register different [authentication strategies](./strategy.md) and manage access tokens (using [JSON web tokens (JWT)](https://jwt.io/) by default). This section describes
@@ -24,9 +24,9 @@ The standard setup of [the generator]() initializes an [AuthenticationService](#
 
 ::: tab "JavaScript"
 ```js
-const { AuthenticationService, JWTStrategy } = require('@feathersjs/authentication');
-const { LocalStrategy } = require('@feathersjs/authentication-local');
-const { expressOauth } = require('@feathersjs/authentication-oauth');
+const { AuthenticationService, JWTStrategy } = require('@docs-dev/authentication');
+const { LocalStrategy } = require('@docs-dev/authentication-local');
+const { expressOauth } = require('@docs-dev/authentication-oauth');
 
 module.exports = app => {
   const authService = new AuthenticationService(app);
@@ -42,10 +42,10 @@ module.exports = app => {
 
 ::: tab "TypeScript"
 ```typescript
-import { Application } from '@feathersjs/feathers';
-import { AuthenticationService, JWTStrategy } from '@feathersjs/authentication';
-import { LocalStrategy } from '@feathersjs/authentication-local';
-import { expressOauth } from '@feathersjs/authentication-oauth';
+import { Application } from '@docs-dev/feathers';
+import { AuthenticationService, JWTStrategy } from '@docs-dev/authentication';
+import { LocalStrategy } from '@docs-dev/authentication-local';
+import { expressOauth } from '@docs-dev/authentication-oauth';
 
 export default (app: Application) => {
   const authService = new AuthenticationService(app);
@@ -226,7 +226,7 @@ After registering an authentication service, it will set the `defaultAuthenticat
 The `AuthenticationService` can be customized like any other ES6 class:
 
 ```js
-const { AuthenticationService } = require('@feathersjs/authentication');
+const { AuthenticationService } = require('@docs-dev/authentication');
 
 class MyAuthService extends AuthenticationService {
   async getPayload(authResult, params) {

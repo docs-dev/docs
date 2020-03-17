@@ -1,19 +1,19 @@
 # Primus
 
-[![npm version](https://img.shields.io/npm/v/@feathersjs/primus.svg?style=flat-square)](https://www.npmjs.com/package/@feathersjs/primus)
-[![Changelog](https://img.shields.io/badge/changelog-.md-blue.svg?style=flat-square)](https://github.com/feathersjs/feathers/blob/master/packages/primus/CHANGELOG.md)
+[![npm version](https://img.shields.io/npm/v/@docs-dev/primus.svg?style=flat-square)](https://www.npmjs.com/package/@docs-dev/primus)
+[![Changelog](https://img.shields.io/badge/changelog-.md-blue.svg?style=flat-square)](https://github.com/docs-dev/feathers/blob/master/packages/primus/CHANGELOG.md)
 
 ```
-$ npm install @feathersjs/primus --save
+$ npm install @docs-dev/primus --save
 ```
 
-The [@feathersjs/primus](https://github.com/feathersjs/primus) module allows to call [service methods](./services.md) and receive [real-time events](./events.md) via [Primus](https://github.com/primus/primus), a universal wrapper for real-time frameworks that supports Engine.IO, WebSockets, Faye, BrowserChannel, SockJS and Socket.IO.
+The [@docs-dev/primus](https://github.com/docs-dev/primus) module allows to call [service methods](./services.md) and receive [real-time events](./events.md) via [Primus](https://github.com/primus/primus), a universal wrapper for real-time frameworks that supports Engine.IO, WebSockets, Faye, BrowserChannel, SockJS and Socket.IO.
 
 > **Important:** This page describes how to set up Primus server. The [Primus client chapter](./client/primus.md) shows how to connect to this server on the client and the message format for service calls and real-time events.
 
 ## Configuration
 
-Additionally to `@feathersjs/primus` your websocket library of choice also has to be installed.
+Additionally to `@docs-dev/primus` your websocket library of choice also has to be installed.
 
 ```
 $ npm install ws --save
@@ -26,8 +26,8 @@ Sets up the Primus transport with the given [Primus options](https://github.com/
 > **Pro tip:** Once the server has been started with `app.listen()` or `app.setup(server)` the Primus server object is available as `app.primus`.
 
 ```js
-const feathers = require('@feathersjs/feathers');
-const primus = require('@feathersjs/primus');
+const feathers = require('@docs-dev/feathers');
+const primus = require('@docs-dev/primus');
 
 const app = feathers();
 
@@ -42,8 +42,8 @@ app.listen(3030);
 Sets up the Primus transport with the given [Primus options](https://github.com/primus/primus) and calls the callback with the Primus server instance.
 
 ```js
-const feathers = require('@feathersjs/feathers');
-const primus = require('@feathersjs/primus');
+const feathers = require('@docs-dev/feathers');
+const primus = require('@docs-dev/primus');
 
 const app = feathers();
 

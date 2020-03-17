@@ -1,13 +1,13 @@
 # OAuth
 
-[![npm version](https://img.shields.io/npm/v/@feathersjs/authentication-oauth.svg?style=flat-square)](https://www.npmjs.com/package/@feathersjs/authentication-oauth)
-[![Changelog](https://img.shields.io/badge/changelog-.md-blue.svg?style=flat-square)](https://github.com/feathersjs/feathers/blob/master/packages/authentication-oauth/CHANGELOG.md)
+[![npm version](https://img.shields.io/npm/v/@docs-dev/authentication-oauth.svg?style=flat-square)](https://www.npmjs.com/package/@docs-dev/authentication-oauth)
+[![Changelog](https://img.shields.io/badge/changelog-.md-blue.svg?style=flat-square)](https://github.com/docs-dev/feathers/blob/master/packages/authentication-oauth/CHANGELOG.md)
 
 ```
-$ npm install @feathersjs/authentication-oauth --save
+$ npm install @docs-dev/authentication-oauth --save
 ```
 
-`@feathersjs/authentication-oauth` allows to authenticate with over 180 oAuth providers (Google, Facebook, GitHub etc.) using [grant](https://github.com/simov/grant), an oAuth middleware module for NodeJS.
+`@docs-dev/authentication-oauth` allows to authenticate with over 180 oAuth providers (Google, Facebook, GitHub etc.) using [grant](https://github.com/simov/grant), an oAuth middleware module for NodeJS.
 
 ## Configuration
 
@@ -180,7 +180,7 @@ With the above configuration will redirect to `https://app.mydomain.com/dashboar
 ```js
 const redis = require('redis')
 const session = require('express-session')
-const { expressOauth } = require('@feathersjs/authentication-oauth');
+const { expressOauth } = require('@docs-dev/authentication-oauth');
 
 const RedisStore = require('connect-redis')(session)
 const redisClient = redis.createClient()
@@ -252,8 +252,8 @@ Normally, any oAuth provider set up in the [configuration](#configuration) will 
 
 ::: tab "JavaScript"
 ```js
-const { AuthenticationService, JWTStrategy } = require('@feathersjs/authentication');
-const { OAuthStrategy } = require('@feathersjs/authentication-oauth');
+const { AuthenticationService, JWTStrategy } = require('@docs-dev/authentication');
+const { OAuthStrategy } = require('@docs-dev/authentication-oauth');
 
 class MyGithubStrategy extends OAuthStrategy {
   async getEntityData(profile) {
@@ -281,9 +281,9 @@ module.exports = app => {
 
 ::: tab "TypeScript"
 ```typescript
-import { Application } from '@feathersjs/feathers';
-import { AuthenticationService, JWTStrategy } from '@feathersjs/authentication';
-import { OAuthStrategy } from '@feathersjs/authentication-oauth';
+import { Application } from '@docs-dev/feathers';
+import { AuthenticationService, JWTStrategy } from '@docs-dev/authentication';
+import { OAuthStrategy } from '@docs-dev/authentication-oauth';
 
 class MyGithubStrategy extends OAuthStrategy {
   async getEntityData(profile: any) {

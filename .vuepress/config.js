@@ -1,10 +1,10 @@
 module.exports = {
-  title: 'FeathersJS',
+  title: 'docs-dev',
   description: 'A REST and real-time API layer for modern applications',
   themeConfig: {
     logo: '/img/feathers-logo-wide.png',
-    repo: 'feathersjs/feathers',
-    docsRepo: 'feathersjs/docs',
+    repo: 'docs-dev/feathers',
+    docsRepo: 'docs-dev/docs',
     docsBranch: 'master',
     editLinks: true,
     sidebarDepth: 2,
@@ -122,28 +122,28 @@ module.exports = {
       {
         text: 'Ecosystem',
         items: [{
-          text: 'Awesome Feathersjs',
-          link: 'https://github.com/feathersjs/awesome-feathersjs'
+          text: 'Awesome docs-dev',
+          link: 'https://github.com/docs-dev/awesome-docs-dev'
         }, {
           text: 'YouTube Playlist',
           link: 'https://www.youtube.com/playlist?list=PLwSdIiqnDlf_lb5y1liQK2OW5daXYgKOe'
         }, {
           text: 'Feathers VueX',
-          link: 'https://vuex.feathersjs.com/'
+          link: 'https://vuex.docs-dev.com/'
         }, {
           text: 'Common Hooks',
-          link: 'https://hooks-common.feathersjs.com/'
+          link: 'https://hooks-common.docs-dev.com/'
         }, {
           text: 'Other versions',
           items: [{
             text: 'Dove (v5, next)',
-            link: 'https://dove.docs.feathersjs.com/'
+            link: 'https://dove.docs.docs-dev.com/'
           }, {
             text: 'Buzzard (v3)',
-            link: 'https://buzzard.docs.feathersjs.com/'
+            link: 'https://buzzard.docs.docs-dev.com/'
           }, {
             text: 'Auk (v2)',
-            link: 'https://auk.docs.feathersjs.com/'
+            link: 'https://auk.docs.docs-dev.com/'
           }]
         }]
       }

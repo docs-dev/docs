@@ -48,7 +48,7 @@ app.use('/my-service', new MyService());
 
 ::: tab "TypeScript class"
 ```typescript
-import { Application, Id, NullableId, Params, Service } from '@feathersjs/feathers';
+import { Application, Id, NullableId, Params, Service } from '@docs-dev/feathers';
 
 class MyService implements Service<any> {
   async find(params: Params) {}
@@ -145,16 +145,16 @@ Writing all that code yourself for every service is pretty repetitive and cumber
 
 | Database | Adapter |
 |---|---|
-| In memory | [feathers-memory](https://github.com/feathersjs-ecosystem/feathers-memory), [feathers-nedb](https://github.com/feathersjs-ecosystem/feathers-nedb) |
-| Localstorage, AsyncStorage | [feathers-localstorage](https://github.com/feathersjs-ecosystem/feathers-localstorage) |
-| Filesystem | [feathers-nedb](https://github.com/feathersjs-ecosystem/feathers-nedb) |
-| MongoDB | [feathers-mongodb](https://github.com/feathersjs-ecosystem/feathers-mongodb), [feathers-mongoose](https://github.com/feathersjs-ecosystem/feathers-mongoose) |
-| MySQL, PostgreSQL, MariaDB, SQLite, MSSQL | [feathers-knex](https://github.com/feathersjs-ecosystem/feathers-knex), [feathers-sequelize](https://github.com/feathersjs-ecosystem/feathers-sequelize), [feathers-objection](https://github.com/feathersjs-ecosystem/feathers-objection) |
-| Elasticsearch | [feathers-elasticsearch](https://github.com/feathersjs-ecosystem/feathers-elasticsearch) |
+| In memory | [feathers-memory](https://github.com/docs-dev-ecosystem/feathers-memory), [feathers-nedb](https://github.com/docs-dev-ecosystem/feathers-nedb) |
+| Localstorage, AsyncStorage | [feathers-localstorage](https://github.com/docs-dev-ecosystem/feathers-localstorage) |
+| Filesystem | [feathers-nedb](https://github.com/docs-dev-ecosystem/feathers-nedb) |
+| MongoDB | [feathers-mongodb](https://github.com/docs-dev-ecosystem/feathers-mongodb), [feathers-mongoose](https://github.com/docs-dev-ecosystem/feathers-mongoose) |
+| MySQL, PostgreSQL, MariaDB, SQLite, MSSQL | [feathers-knex](https://github.com/docs-dev-ecosystem/feathers-knex), [feathers-sequelize](https://github.com/docs-dev-ecosystem/feathers-sequelize), [feathers-objection](https://github.com/docs-dev-ecosystem/feathers-objection) |
+| Elasticsearch | [feathers-elasticsearch](https://github.com/docs-dev-ecosystem/feathers-elasticsearch) |
 
 > __Pro tip:__ Each one of the linked adapters has a complete standalone REST API example in their readme.
 
-In this guide we will use  [NeDB](https://github.com/feathersjs-ecosystem/feathers-nedb/) which is a database that writes to the filesystem and does not require any additional setup. The users service that was created when we [generated our application](./generator.md) is already using it. In larger applications you probably want to choose something like PostgreSQL or MongoDB but NeDB is great for this guide because it gets us started quickly without having to learn and install a database system.
+In this guide we will use  [NeDB](https://github.com/docs-dev-ecosystem/feathers-nedb/) which is a database that writes to the filesystem and does not require any additional setup. The users service that was created when we [generated our application](./generator.md) is already using it. In larger applications you probably want to choose something like PostgreSQL or MongoDB but NeDB is great for this guide because it gets us started quickly without having to learn and install a database system.
 
 > __Note:__ NeDB stores its data in our application directory under a `data/` folder. It uses a JSON append-only file format. This means that if you look at the database files directly you might see the same entry multiple times but it will always return the correct data.
 
@@ -218,7 +218,7 @@ Update `src/services/users/users.class.ts` with the following:
 
 ```ts
 import crypto from 'crypto';
-import { Params } from '@feathersjs/feathers';
+import { Params } from '@docs-dev/feathers';
 import { Service, NedbServiceOptions } from 'feathers-nedb';
 import { Application } from '../../declarations';
 

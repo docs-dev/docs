@@ -1,17 +1,17 @@
 # Socket.io Client
 
-## @feathersjs/socketio-client
+## @docs-dev/socketio-client
 
-[![npm version](https://img.shields.io/npm/v/@feathersjs/client.svg?style=flat-square)](https://www.npmjs.com/package/@feathersjs/socketio-client)
-[![Changelog](https://img.shields.io/badge/changelog-.md-blue.svg?style=flat-square)](https://github.com/feathersjs/feathers/blob/master/packages/socketio-client/CHANGELOG.md)
+[![npm version](https://img.shields.io/npm/v/@docs-dev/client.svg?style=flat-square)](https://www.npmjs.com/package/@docs-dev/socketio-client)
+[![Changelog](https://img.shields.io/badge/changelog-.md-blue.svg?style=flat-square)](https://github.com/docs-dev/feathers/blob/master/packages/socketio-client/CHANGELOG.md)
 
 ```
-$ npm install @feathersjs/socketio-client --save
+$ npm install @docs-dev/socketio-client --save
 ```
 
-The `@feathersjs/socketio-client` module allows to connect to services exposed through the [Socket.io transport](../socketio.md) via a Socket.io socket.
+The `@docs-dev/socketio-client` module allows to connect to services exposed through the [Socket.io transport](../socketio.md) via a Socket.io socket.
 
-> **Note:** We recommend using Feathers and the `@feathersjs/socketio-client` module on the client if possible. If however, you want to use a direct Socket.io connection without using Feathers on the client, see the [Direct connection](#direct-connection) section.
+> **Note:** We recommend using Feathers and the `@docs-dev/socketio-client` module on the client if possible. If however, you want to use a direct Socket.io connection without using Feathers on the client, see the [Direct connection](#direct-connection) section.
 
 <!-- -->
 
@@ -25,11 +25,11 @@ Initialize the Socket.io client using a given socket and the default options.
 
 ::: tab "Modular"
 ``` javascript
-const feathers = require('@feathersjs/feathers');
-const socketio = require('@feathersjs/socketio-client');
+const feathers = require('@docs-dev/feathers');
+const socketio = require('@docs-dev/socketio-client');
 const io = require('socket.io-client');
 
-const socket = io('http://api.feathersjs.com');
+const socket = io('http://api.docs-dev.com');
 const app = feathers();
 
 // Set up Socket.io client with the socket
@@ -46,15 +46,15 @@ app.service('messages').create({
 ```
 :::
 
-::: tab "@feathersjs/client"
+::: tab "@docs-dev/client"
 ``` html
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/core-js/2.1.4/core.min.js"></script>
-<script src="//unpkg.com/@feathersjs/client@^3.0.0/dist/feathers.js"></script>
+<script src="//unpkg.com/@docs-dev/client@^3.0.0/dist/feathers.js"></script>
 <script src="//unpkg.com/socket.io-client@1.7.3/dist/socket.io.js"></script>
 <script>
   // Socket.io is exposed as the `io` global.
-  var socket = io('http://api.feathersjs.com');
-  // @feathersjs/client is exposed as the `feathers` global.
+  var socket = io('http://api.docs-dev.com');
+  // @docs-dev/client is exposed as the `feathers` global.
   var app = feathers();
 
   // Set up Socket.io client with the socket
@@ -86,11 +86,11 @@ Options can be:
 - `timeout` (default: 5000ms) - The time after which a method call fails and times out. This usually happens when calling a service or service method that does not exist.
 
 ```js
-const feathers = require('@feathersjs/feathers');
-const socketio = require('@feathersjs/socketio-client');
+const feathers = require('@docs-dev/feathers');
+const socketio = require('@docs-dev/socketio-client');
 const io = require('socket.io-client');
 
-const socket = io('http://api.feathersjs.com');
+const socket = io('http://api.docs-dev.com');
 const app = feathers();
 
 // Set up Socket.io client with the socket
@@ -157,7 +157,7 @@ const socket = io('http://localhost:3030');
 
 socket.emit('create', 'authentication', {
   strategy: 'local',
-  email: 'hello@feathersjs.com',
+  email: 'hello@docs-dev.com',
   password: 'supersecret'
 }, function(error, authResult) {
   console.log(authResult); 

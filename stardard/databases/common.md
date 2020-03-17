@@ -97,7 +97,7 @@ app.service('todos').find({
 });
 ```
 
-> **Note:** Disabling or changing the default pagination is not available in the client. Only `params.query` is passed to the server (also see a [workaround here](https://github.com/feathersjs/feathers/issues/382#issuecomment-238407741))
+> **Note:** Disabling or changing the default pagination is not available in the client. Only `params.query` is passed to the server (also see a [workaround here](https://github.com/docs-dev/feathers/issues/382#issuecomment-238407741))
 
 > **Pro tip:** To just get the number of available records set `$limit` to `0`. This will only run a (fast) counting query against the database.
 
@@ -144,7 +144,7 @@ app.use('/todos', new MyService({
 Another option is weaving in functionality through [hooks](../hooks.md). For example, `createdAt` and `updatedAt` timestamps could be added like this:
 
 ```js
-const feathers = require('@feathersjs/feathers');
+const feathers = require('@docs-dev/feathers');
 
 // Import the database adapter of choice
 const service = require('feathers-<adapter>');

@@ -1,5 +1,5 @@
 {
-  "title": "FeathersJS",
+  "title": "docs-dev",
   "styles": {
     "website": "styles/website.css"
   },
@@ -15,7 +15,7 @@
   ],
   "pluginsConfig": {
     "edit-link": {
-      "base": "https://github.com/feathersjs/docs/edit/master",
+      "base": "https://github.com/docs-dev/docs/edit/master",
       "label": "Edit This Page",
       "placement": "left"
     },
@@ -29,22 +29,22 @@
       "deep": true
     },
     "versions": {
-      "gitbookConfigURL": "https://rawgit.com/feathersjs/feathers-docs/master/book.json",
+      "gitbookConfigURL": "https://rawgit.com/docs-dev/feathers-docs/master/book.json",
       "options": [
         {
-          "value": "https://crow.docs.feathersjs.com",
+          "value": "https://crow.docs.docs-dev.com",
           "text": "v4 (Crow)"
         },
         {
-          "value": "https://docs.feathersjs.com",
+          "value": "https://docs.docs-dev.com",
           "text": "v3 (Buzzard)"
         },
         {
-          "value": "https://auk.docs.feathersjs.com",
+          "value": "https://auk.docs.docs-dev.com",
           "text": "v2 (Auk)"
         },
         {
-          "value": "https://legacy.docs.feathersjs.com",
+          "value": "https://legacy.docs.docs-dev.com",
           "text": "v1 (Legacy)"
         }
       ]

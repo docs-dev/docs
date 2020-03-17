@@ -10,7 +10,7 @@ Just like services themselves, hooks are *transport independent*. They are usual
 
 Hooks are commonly used to handle things like validation, authorization, logging, populating related entities, sending notifications and more. 
 
-> __Pro tip:__ For the general design pattern behind hooks see [this blog post](https://blog.feathersjs.com/design-patterns-for-modern-web-apis-1f046635215). A more Feathers specific overview can be found [here](https://blog.feathersjs.com/api-service-composition-with-hooks-47af13aa6c01).
+> __Pro tip:__ For the general design pattern behind hooks see [this blog post](https://blog.docs-dev.com/design-patterns-for-modern-web-apis-1f046635215). A more Feathers specific overview can be found [here](https://blog.docs-dev.com/api-service-composition-with-hooks-47af13aa6c01).
 
 ## Quick example
 
@@ -34,7 +34,7 @@ app.service('messages').hooks({
 :::
 ::: tab "TypeScript"
 ```ts
-import { HookContext } from '@feathersjs/feathers';
+import { HookContext } from '@docs-dev/feathers';
 
 const createdAt = async (context: HookContext) => {
   context.data.createdAt = new Date();
@@ -78,7 +78,7 @@ app.service('messages').hooks({
 :::
 ::: tab "TypeScript"
 ```ts
-import { HookContext } from '@feathersjs/feathers';
+import { HookContext } from '@docs-dev/feathers';
 
 const setTimestamp = (name: string) => {
   return async (context: HookContext) => {
@@ -266,8 +266,8 @@ Update `src/hooks/process-message.ts` to look like this:
 
 ```js
 // Use this hook to manipulate incoming or outgoing data.
-// For more information on hooks see: http://docs.feathersjs.com/api/hooks.html
-import { Hook, HookContext } from '@feathersjs/feathers';
+// For more information on hooks see: http://docs.docs-dev.com/api/hooks.html
+import { Hook, HookContext } from '@docs-dev/feathers';
 
 export default () : Hook => {
   return async (context: HookContext) => {
@@ -366,8 +366,8 @@ Update `src/hooks/populate-user.ts` to:
 
 ```ts
 // Use this hook to manipulate incoming or outgoing data.
-// For more information on hooks see: http://docs.feathersjs.com/api/hooks.html
-import { Hook, HookContext } from '@feathersjs/feathers';
+// For more information on hooks see: http://docs.docs-dev.com/api/hooks.html
+import { Hook, HookContext } from '@docs-dev/feathers';
 
 export default (): Hook => {
   return async (context: HookContext) => {

@@ -1,6 +1,6 @@
 # Primus Client
 
-> **Note:** We recommend using Feathers and the `@feathersjs/primus-client` module on the client if possible. To use a direct Primus connection without using Feathers on the client however see the [Direct connection](#direct-connection) section.
+> **Note:** We recommend using Feathers and the `@docs-dev/primus-client` module on the client if possible. To use a direct Primus connection without using Feathers on the client however see the [Direct connection](#direct-connection) section.
 
 ## Loading the Primus client library
 
@@ -25,19 +25,19 @@ const Socket = Primus.createSocket({
     'emitter': Emitter
   }
 });
-const socket = new Socket('http://api.feathersjs.com');
+const socket = new Socket('http://api.docs-dev.com');
 ```
 
-## @feathersjs/primus-client
+## @docs-dev/primus-client
 
-[![npm version](https://img.shields.io/npm/v/@feathersjs/client.svg?style=flat-square)](https://www.npmjs.com/package/@feathersjs/primus-client)
-[![Changelog](https://img.shields.io/badge/changelog-.md-blue.svg?style=flat-square)](https://github.com/feathersjs/feathers/blob/master/packages/primus-client/CHANGELOG.md)
+[![npm version](https://img.shields.io/npm/v/@docs-dev/client.svg?style=flat-square)](https://www.npmjs.com/package/@docs-dev/primus-client)
+[![Changelog](https://img.shields.io/badge/changelog-.md-blue.svg?style=flat-square)](https://github.com/docs-dev/feathers/blob/master/packages/primus-client/CHANGELOG.md)
 
 ```
-$ npm install @feathersjs/primus-client --save
+$ npm install @docs-dev/primus-client --save
 ```
 
-The `@feathersjs/primus-client` module allows to connect to services exposed through the [Primus server](../primus.md) via the configured websocket library.
+The `@docs-dev/primus-client` module allows to connect to services exposed through the [Primus server](../primus.md) via the configured websocket library.
 
 > **Important:** Primus sockets are also used to *call* service methods. Using sockets for both, calling methods and receiving real-time events is generally faster than using [REST](../express.md) and there is no need to use both, REST and websockets in the same client application at the same time.
 
@@ -49,8 +49,8 @@ Initialize the Primus client using a given socket and the default options.
 
 ::: tab "Modular"
 ``` javascript
-const feathers = require('@feathersjs/feathers');
-const primusClient = require('@feathersjs/primus-client');
+const feathers = require('@docs-dev/feathers');
+const primusClient = require('@docs-dev/primus-client');
 const socket = new Primus('http://api.my-feathers-server.com');
 
 const app = feathers();
@@ -68,15 +68,15 @@ app.service('messages').create({
 ```
 :::
 
-::: tab "@feathersjs/client"
+::: tab "@docs-dev/client"
 ``` html
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/core-js/2.1.4/core.min.js"></script>
-<script src="//unpkg.com/@feathersjs/client@^3.0.0/dist/feathers.js"></script>
+<script src="//unpkg.com/@docs-dev/client@^3.0.0/dist/feathers.js"></script>
 <script type="text/javascript" src="primus/primus.js"></script>
 <script>
   // Socket.io is exposed as the `io` global.
   var socket = new Primus('http://api.my-feathers-server.com');
-  // @feathersjs/client is exposed as the `feathers` global.
+  // @docs-dev/client is exposed as the `feathers` global.
   var app = feathers();
 
   app.configure(feathers.primus(socket));
@@ -104,8 +104,8 @@ Options can be:
 - `timeout` (default: 5000ms) - The time after which a method call fails and times out. This usually happens when calling a service or service method that does not exist.
 
 ```js
-const feathers = require('@feathersjs/feathers');
-const Primus = require('@feathersjs/primus-client');
+const feathers = require('@docs-dev/feathers');
+const Primus = require('@docs-dev/primus-client');
 const socket = new Primus('http://api.my-feathers-server.com');
 
 const app = feathers();
@@ -149,7 +149,7 @@ Sockets will be authenticated automatically by calling [.create](#create) on the
 ```js
 socket.send('create', 'authentication', {
   strategy: 'local',
-  email: 'hello@feathersjs.com',
+  email: 'hello@docs-dev.com',
   password: 'supersecret'
 }, function(error, authResult) {
   console.log(authResult); 

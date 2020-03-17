@@ -72,7 +72,7 @@ In `src/authentication.js`:
 
 ```js
 const axios = require('axios');
-const { OAuthStrategy } = require('@feathersjs/authentication-oauth');
+const { OAuthStrategy } = require('@docs-dev/authentication-oauth');
 
 class GoogleStrategy extends OAuthStrategy {
   async getEntityData(profile) {

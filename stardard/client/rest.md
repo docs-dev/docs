@@ -1,15 +1,15 @@
 # REST Client
 
-## @feathersjs/rest-client
+## @docs-dev/rest-client
 
-[![npm version](https://img.shields.io/npm/v/@feathersjs/client.svg?style=flat-square)](https://www.npmjs.com/package/@feathersjs/rest-client)
-[![Changelog](https://img.shields.io/badge/changelog-.md-blue.svg?style=flat-square)](https://github.com/feathersjs/feathers/blob/master/packages/rest-client/CHANGELOG.md)
+[![npm version](https://img.shields.io/npm/v/@docs-dev/client.svg?style=flat-square)](https://www.npmjs.com/package/@docs-dev/rest-client)
+[![Changelog](https://img.shields.io/badge/changelog-.md-blue.svg?style=flat-square)](https://github.com/docs-dev/feathers/blob/master/packages/rest-client/CHANGELOG.md)
 
 ```
-$ npm install @feathersjs/rest-client --save
+$ npm install @docs-dev/rest-client --save
 ```
 
-`@feathersjs/rest-client` allows to connect to a service exposed through the [Express REST API](../express.md#expressrest) using [jQuery](https://jquery.com/), [request](https://github.com/request/request), [Superagent](http://visionmedia.github.io/superagent/), [Axios](https://github.com/mzabriskie/axios) or [Fetch](https://facebook.github.io/react-native/docs/network.html) as the AJAX library.
+`@docs-dev/rest-client` allows to connect to a service exposed through the [Express REST API](../express.md#expressrest) using [jQuery](https://jquery.com/), [request](https://github.com/request/request), [Superagent](http://visionmedia.github.io/superagent/), [Axios](https://github.com/mzabriskie/axios) or [Fetch](https://facebook.github.io/react-native/docs/network.html) as the AJAX library.
 
 > **Note:** For directly using a Feathers REST API (via HTTP) without using Feathers on the client see the [HTTP API](#http-api) section.
 
@@ -23,14 +23,14 @@ $ npm install @feathersjs/rest-client --save
 
 ### rest([baseUrl])
 
-REST client services can be initialized by loading `@feathersjs/rest-client` and initializing a client object with a base URL:
+REST client services can be initialized by loading `@docs-dev/rest-client` and initializing a client object with a base URL:
 
 :::: tabs :options="{ useUrlFragment: false }"
 
 ::: tab "Modular"
 ``` javascript
-const feathers = require('@feathersjs/feathers');
-const rest = require('@feathersjs/rest-client');
+const feathers = require('@docs-dev/feathers');
+const rest = require('@docs-dev/rest-client');
 
 const app = feathers();
 
@@ -48,10 +48,10 @@ const messages = app.service('messages');
 ```
 :::
 
-::: tab "@feathersjs/client"
+::: tab "@docs-dev/client"
 ``` html
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/core-js/2.1.4/core.min.js"></script>
-<script src="//unpkg.com/@feathersjs/client@^3.0.0/dist/feathers.js"></script>
+<script src="//unpkg.com/@docs-dev/client@^3.0.0/dist/feathers.js"></script>
 <script>
   var app = feathers();
   // Connect to a different URL
@@ -70,7 +70,7 @@ const messages = app.service('messages');
 
 <!-- -->
 
-> **ProTip:** In the browser, the base URL is relative from where services are registered. That means that a service at `http://api.feathersjs.com/api/v1/messages` with a base URL of `http://api.feathersjs.com` would be available as `app.service('api/v1/messages')`. With a base URL of `http://api.feathersjs.com/api/v1` it would be `app.service('messages')`.
+> **ProTip:** In the browser, the base URL is relative from where services are registered. That means that a service at `http://api.docs-dev.com/api/v1/messages` with a base URL of `http://api.docs-dev.com` would be available as `app.service('api/v1/messages')`. With a base URL of `http://api.docs-dev.com/api/v1` it would be `app.service('messages')`.
 
 ### params.headers
 
@@ -80,7 +80,7 @@ Request specific headers can be through `params.headers` in a service call:
 app.service('messages').create({
   text: 'A message from a REST client'
 }, {
-  headers: { 'X-Requested-With': 'FeathersJS' }
+  headers: { 'X-Requested-With': 'docs-dev' }
 });
 ```
 
@@ -191,8 +191,8 @@ app.configure(restClient.fetch(window.fetch));
 It is possible to instantiate and use individual services pointing to different servers by calling `rest('server').<library>().service(name)`:
 
 ```js
-const feathers = require('@feathersjs/feathers');
-const rest = require('@feathersjs/rest-client');
+const feathers = require('@docs-dev/feathers');
+const rest = require('@docs-dev/rest-client');
 
 const app = feathers();
 
@@ -227,7 +227,7 @@ This can be useful if you wish to override how the query is transformed before i
 ```js
 // In Node
 const fetch = require('node-fetch');
-const { FetchClient } = require('@feathersjs/rest-client');
+const { FetchClient } = require('@docs-dev/rest-client');
 const qs = require('qs');
 
 class CustomFetch extends FetchClient {

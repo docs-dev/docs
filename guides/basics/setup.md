@@ -12,10 +12,10 @@ You can find the final version at
 
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab "JavaScript"
-The [feathersjs/feathers-chat](https://github.com/feathersjs/feathers-chat) repository
+The [docs-dev/feathers-chat](https://github.com/docs-dev/feathers-chat) repository
 :::
 ::: tab "TypeScript"
-The [feathersjs/feathers-chat-ts](https://github.com/feathersjs/feathers-chat-ts) repository
+The [docs-dev/feathers-chat-ts](https://github.com/docs-dev/feathers-chat-ts) repository
 :::
 ::::
 
@@ -49,7 +49,7 @@ Feathers works standalone but also provides [an integration](../../api/express.m
 
 Although Feathers works with many databases, this guide will only use [NeDB](https://github.com/louischatriot/nedb/) which is a file-system based database so there is no need to run a database server. More information about specific databases can be found in the [databases API](../../api/databases/adapters.md).
 
-This guide will also only focus on Feathers core functionality. Once you are finished with the guide, have a look at the [ecosystem page](https://github.com/feathersjs/awesome-feathersjs) for more advanced plugins.
+This guide will also only focus on Feathers core functionality. Once you are finished with the guide, have a look at the [ecosystem page](https://github.com/docs-dev/awesome-docs-dev) for more advanced plugins.
 
 ## What's next?
 

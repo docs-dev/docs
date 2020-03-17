@@ -9,7 +9,7 @@ Although the frontend we will create [in the next chapter](./frontend.md) will a
 ```js
 // POST /users
 {
-  "email": "hello@feathersjs.com",
+  "email": "hello@docs-dev.com",
   "password": "supersecret"
 }
 ```
@@ -19,7 +19,7 @@ Try it:
 ```sh
 curl 'http://localhost:3030/users/' \
   -H 'Content-Type: application/json' \
-  --data-binary '{ "email": "hello@feathersjs.com", "password": "supersecret" }'
+  --data-binary '{ "email": "hello@docs-dev.com", "password": "supersecret" }'
 ```
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/6bcea48aac6c7494c2ad)
@@ -31,7 +31,7 @@ This will return something like this:
 ```json
 {
   "_id": "<random id>",
-  "email": "hello@feathersjs.com",
+  "email": "hello@docs-dev.com",
   "avatar": "https://s.gravatar.com/avatar/ffe2a09df37d7c646e974a2d2b8d3e03?s=60"  
 }
 ```
@@ -52,7 +52,7 @@ Tokens can be created by sending a POST request to the `/authentication` endpoin
 // POST /authentication
 {
   "strategy": "local",
-  "email": "hello@feathersjs.com",
+  "email": "hello@docs-dev.com",
   "password": "supersecret"
 }
 ```
@@ -62,7 +62,7 @@ Try it:
 ```sh
 curl 'http://localhost:3030/authentication/' \
   -H 'Content-Type: application/json' \
-  --data-binary '{ "strategy": "local", "email": "hello@feathersjs.com", "password": "supersecret" }'
+  --data-binary '{ "strategy": "local", "email": "hello@docs-dev.com", "password": "supersecret" }'
 ```
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/6bcea48aac6c7494c2ad)
@@ -77,7 +77,7 @@ This will return something like this:
   },
   "user":{
     "_id":"<user id>",
-    "email":"hello@feathersjs.com",
+    "email":"hello@docs-dev.com",
     "avatar":"https://s.gravatar.com/avatar/ffe2a09df37d7c646e974a2d2b8d3e03?s=60",
   }
 }
@@ -97,7 +97,7 @@ When using Feathers on the client, the authentication client does all those auth
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0" />
-    <title>FeathersJS chat</title>
+    <title>docs-dev chat</title>
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="//unpkg.com/feathers-chat@4.0.0/public/base.css">
     <link rel="stylesheet" href="//unpkg.com/feathers-chat@4.0.0/public/chat.css">
@@ -105,7 +105,7 @@ When using Feathers on the client, the authentication client does all those auth
   <body>
     <div id="app" class="flex flex-column"></div>
     <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.12.0/moment.js"></script>
-    <script src="//unpkg.com/@feathersjs/client@^4.3.0/dist/feathers.js"></script>
+    <script src="//unpkg.com/@docs-dev/client@^4.3.0/dist/feathers.js"></script>
     <script src="/socket.io/socket.io.js"></script>
     <script src="app.js"></script>
   </body>
@@ -138,7 +138,7 @@ const login = async () => {
     // to get the login information
     return await client.authenticate({
       strategy: 'local',
-      email: 'hello@feathersjs.com',
+      email: 'hello@docs-dev.com',
       password: 'supersecret'
     });
   }
@@ -201,9 +201,9 @@ This tells the oAuth strategy to redirect back to our index page after a success
 Update `src/authentication.js` as follows:
 
 ```js
-const { AuthenticationService, JWTStrategy } = require('@feathersjs/authentication');
-const { LocalStrategy } = require('@feathersjs/authentication-local');
-const { expressOauth, OAuthStrategy } = require('@feathersjs/authentication-oauth');
+const { AuthenticationService, JWTStrategy } = require('@docs-dev/authentication');
+const { LocalStrategy } = require('@docs-dev/authentication-local');
+const { expressOauth, OAuthStrategy } = require('@docs-dev/authentication-oauth');
 
 class GitHubStrategy extends OAuthStrategy {
   async getEntityData(profile) {
@@ -232,10 +232,10 @@ module.exports = app => {
 Update `src/authentication.ts` as follows:
 
 ```ts
-import { ServiceAddons, Params } from '@feathersjs/feathers';
-import { AuthenticationService, JWTStrategy } from '@feathersjs/authentication';
-import { LocalStrategy } from '@feathersjs/authentication-local';
-import { expressOauth, OAuthStrategy, OAuthProfile } from '@feathersjs/authentication-oauth';
+import { ServiceAddons, Params } from '@docs-dev/feathers';
+import { AuthenticationService, JWTStrategy } from '@docs-dev/authentication';
+import { LocalStrategy } from '@docs-dev/authentication-local';
+import { expressOauth, OAuthStrategy, OAuthProfile } from '@docs-dev/authentication-oauth';
 
 import { Application } from './declarations';
 

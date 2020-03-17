@@ -2,9 +2,9 @@
 
 An authentication strategy is any object or class that implements at least an [authenticate(data, params)]() method. They can be registered with the AuthenticationService to authenticate service calls and other requests. The following strategies already come with Feathers:
 
-- [JWTStrategy](./jwt.md) in `@feathersjs/authentication`
-- [LocalStrategy](./local.md) in `@feathersjs/authentication-local`
-- [OAuthStrategy](./oauth.md) in `@feathersjs/authentication-oauth`
+- [JWTStrategy](./jwt.md) in `@docs-dev/authentication`
+- [LocalStrategy](./local.md) in `@docs-dev/authentication-local`
+- [OAuthStrategy](./oauth.md) in `@docs-dev/authentication-oauth`
 
 More details on how to customize existing strategies can be found in their  API documentation. This section describes the APIcommon methods for all authentication strategies and how a custom authentication strategy can implemented.
 

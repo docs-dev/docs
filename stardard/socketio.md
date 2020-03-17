@@ -1,27 +1,27 @@
 # Socket.io
 
-[![npm version](https://img.shields.io/npm/v/@feathersjs/socketio.svg?style=flat-square)](https://www.npmjs.com/package/@feathersjs/socketio)
-[![Changelog](https://img.shields.io/badge/changelog-.md-blue.svg?style=flat-square)](https://github.com/feathersjs/feathers/blob/master/packages/socketio/CHANGELOG.md)
+[![npm version](https://img.shields.io/npm/v/@docs-dev/socketio.svg?style=flat-square)](https://www.npmjs.com/package/@docs-dev/socketio)
+[![Changelog](https://img.shields.io/badge/changelog-.md-blue.svg?style=flat-square)](https://github.com/docs-dev/feathers/blob/master/packages/socketio/CHANGELOG.md)
 
 ```
-$ npm install @feathersjs/socketio --save
+$ npm install @docs-dev/socketio --save
 ```
 
-The [@feathersjs/socketio](https://github.com/feathersjs/socketio) module allows to call [service methods](./services.md) and receive [real-time events](./events.md) via [Socket.io](http://socket.io/), a NodeJS library which enables real-time bi-directional, event-based communication.
+The [@docs-dev/socketio](https://github.com/docs-dev/socketio) module allows to call [service methods](./services.md) and receive [real-time events](./events.md) via [Socket.io](http://socket.io/), a NodeJS library which enables real-time bi-directional, event-based communication.
 
 > **Important:** This page describes how to set up a Socket.io server. The [Socket.io client chapter](./client/socketio.md) shows how to connect to this server on the client and the message format for service calls and real-time events.
 
 ## Configuration
 
-`@feathersjs/socketio` can be used standalone or together with a Feathers framework integration like [Express](./express.md).
+`@docs-dev/socketio` can be used standalone or together with a Feathers framework integration like [Express](./express.md).
 
 ### app.configure(socketio())
 
 Sets up the Socket.io transport with the default configuration using either the server provided by [app.listen](./application.md#listenport) or passed in [app.setup(server)](./application.md#setupserver).
 
 ```js
-const feathers = require('@feathersjs/feathers');
-const socketio = require('@feathersjs/socketio');
+const feathers = require('@docs-dev/feathers');
+const socketio = require('@docs-dev/socketio');
 
 const app = feathers();
 
@@ -37,8 +37,8 @@ app.listen(3030);
 Sets up the Socket.io transport with the default configuration and call `callback` with the [Socket.io server object](http://socket.io/docs/server-api/). This is a good place to listen to custom events or add [authorization](https://github.com/LearnBoost/socket.io/wiki/Authorizing):
 
 ```js
-const feathers = require('@feathersjs/feathers');
-const socketio = require('@feathersjs/socketio');
+const feathers = require('@docs-dev/feathers');
+const socketio = require('@docs-dev/socketio');
 
 const app = feathers();
 
@@ -69,8 +69,8 @@ This can be used to e.g. configure the path where Socket.io is initialize (`sock
 
 
 ```js
-const feathers = require('@feathersjs/feathers');
-const socketio = require('@feathersjs/socketio');
+const feathers = require('@docs-dev/feathers');
+const socketio = require('@docs-dev/socketio');
 
 const app = feathers();
 
@@ -89,8 +89,8 @@ app.listen(3030);
 Creates a new Socket.io server on a separate port. Options and a callback are optional and work as described above.
 
 ```js
-const feathers = require('@feathersjs/feathers');
-const socketio = require('@feathersjs/socketio');
+const feathers = require('@docs-dev/feathers');
+const socketio = require('@docs-dev/socketio');
 
 const app = feathers();
 

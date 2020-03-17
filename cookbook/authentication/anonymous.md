@@ -7,7 +7,7 @@ Anonymous authentication can be allowed by creating a [custom strategy](../../ap
 In `src/authentication.js`:
 
 ```js
-const { AuthenticationBaseStrategy } = require('@feathersjs/authentication');
+const { AuthenticationBaseStrategy } = require('@docs-dev/authentication');
 
 class AnonymousStrategy extends AuthenticationBaseStrategy {
   async authenticate(authentication, params) {
@@ -25,8 +25,8 @@ module.exports = app => {
 :::
 ::: tab "TypeScript"
 ```ts
-import { Params } from '@feathersjs/feathers';
-import { AuthenticationBaseStrategy, AuthenticationResult } from '@feathersjs/authentication';
+import { Params } from '@docs-dev/feathers';
+import { AuthenticationBaseStrategy, AuthenticationResult } from '@docs-dev/authentication';
 
 class AnonymousStrategy extends AuthenticationBaseStrategy {
   async authenticate(authentication: AuthenticationResult, params: Params) {
@@ -71,7 +71,7 @@ module.exports = function (options = {}) { // eslint-disable-line no-unused-vars
 :::
 ::: tab "TypeScript"
 ```ts
-import { Hook, HookContext } from '@feathersjs/feathers';
+import { Hook, HookContext } from '@docs-dev/feathers';
 
 export default (): Hook => {
   return async (context: HookContext) => {

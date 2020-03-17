@@ -9,8 +9,8 @@ To add the ability to revoke an access token so that it can be no longer used ev
 The following example shows the basic flow of how a JWT can be revoked by storing it in a plain object. In a normal application you would use something like the [Redis storage shown below](using-redis).
 
 ```js
-const { AuthenticationService } = require('@feathersjs/authentication');
-const { NotAuthenticated } = require('@feathersjs/errors');
+const { AuthenticationService } = require('@docs-dev/authentication');
+const { NotAuthenticated } = require('@docs-dev/errors');
 
 const revokedTokens = {};
 
@@ -61,8 +61,8 @@ npm install redis
 const { promisify } = require('util');
 const redis = require('redis');
 
-const { AuthenticationService } = require('@feathersjs/authentication');
-const { NotAuthenticated } = require('@feathersjs/errors');
+const { AuthenticationService } = require('@docs-dev/authentication');
+const { NotAuthenticated } = require('@docs-dev/errors');
 
 class RedisAuthService extends AuthenticationService {
   constructor (app, configKey) {

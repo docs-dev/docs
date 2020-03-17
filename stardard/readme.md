@@ -1,6 +1,6 @@
-# API
+# Stardard
 
-This section describes all the individual modules and APIs of Feathers. There are three main sections of the API:
+This section describes all the stardard progamming of Dev. There are three main sections:
 
 - __Core:__ The Feathers core functionality that can be used on the server and the client
 - __Server:__ Feathers server side modules used with Core when creating an API server in NodeJS

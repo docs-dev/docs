@@ -3,7 +3,7 @@ title: Docs Dev | A Note for development software engineer
 sidebar: false
 ---
 
-<img style="display: block; width: 400px; margin: 0 auto; margin-top: 4em; margin-bottom: 2em;" src="/img/webdev.svg" alt="Docs logo" />
+<img style="display: block; width: 400px; margin: 0 auto; margin-top: 4em; margin-bottom: 2em;" src="/img/docs.png" alt="Docs logo" />
 
 Welcome to the Dev documentation of GooUp! This is a lightweight quick-note for tranfer knowledge and improve technical skill. Docs write about backend technology, Frontend, Devop, Data Engineer and Data Scienctist...
 
