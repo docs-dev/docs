@@ -1,6 +1,6 @@
 module.exports = {
   title: 'docs-dev',
-  description: 'A REST and real-time API layer for modern applications',
+  description: 'A Docs for Dev',
   themeConfig: {
     logo: '/img/docs-logo-wide.png',
     repo: 'docs-dev/docs',
@@ -31,12 +31,12 @@ module.exports = {
           '/help/faq.md'
         ]
       }],
-      '/api/': [{
+      '/stardard/': [{
         title: 'Core',
         collapsable: false,
         children: [
-          'application.md',
-          'services.md',
+          'clean_code.md',
+          'convention.md',
           'hooks.md',
           'events.md',
           'errors.md',
@@ -116,7 +116,7 @@ module.exports = {
     },
     nav: [
       { text: 'Guides', link: '/guides/' },
-      { text: 'API', link: '/api/' },
+      { text: 'Stardard', link: '/stardard/' },
       { text: 'Cookbook', link: '/cookbook/' },
       { text: 'Help', link: '/help/' },
       {
