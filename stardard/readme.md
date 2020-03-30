@@ -12,10 +12,10 @@ This section describes all the stardard progamming of Dev. There are three main 
 
 ## Core
 
-Feathers core functionality that works on the client and the server
+ Core functionality that works on the client and the server
 
-* [Application](application.md) - The main Feathers application API
-* [Services](services.md) - Service objects and their methods and Feathers specific functionality
+* [Clean-Code](clean_code.md) - The main stardard progamming
+* [Convention](convention.md) - Service objects and their methods and Feathers specific functionality
 * [Hooks](hooks.md) - Pluggable middleware for service  methods
 * [Events](events.md) - Events sent by Feathers service methods
 * [Errors](errors.md) - A collection of error classes used throughout Feathers

@@ -1,4 +1,4 @@
-# Application
+# Clean Code
 
 [![npm version](https://img.shields.io/npm/v/feathers.svg?style=flat-square)](https://www.npmjs.com/package/feathers)
 [![Changelog](https://img.shields.io/badge/changelog-.md-blue.svg?style=flat-square)](https://github.com/docs-dev/feathers/blob/master/packages/feathers/CHANGELOG.md)
