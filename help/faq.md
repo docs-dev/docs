@@ -156,11 +156,11 @@ Feathers [database adapters](../api/databases/adapters.md) implement 90% of the 
 
 The why and how to write your own services is covered [in the Feathers guide](../guides/). In the generator a custom service can be created by running `feathers generate service`, choosing "A custom service" and then editing the `<servicename>/<servicename>.class.js` file to make the appropriate database calls.
 
-If you would like to publish your own database adapter, first make sure there isn't already a [community maintained adapter](https://github.com/docs-dev/awesome-docs-dev#database) for that database (many maintainers are happy to get some help, too). If not, you can run `feathers generate plugin` to create a new plugin. A reference implementation for a database adapter can be found in the [feathers-memory repository](https://github.com/docs-dev-ecosystem/feathers-memory). It is always possible for community maintained adapters to graduate into an _official_ Feathers adapter, at the moment there are however no plans to add support for any new databases from the Feathers team directly.
+If you would like to publish your own database adapter, first make sure there isn't already a [community maintained adapter](https://github.com/docs-dev/awesome-docs-dev#database) for that database (many maintainers are happy to get some help, too). If not, you can run `feathers generate plugin` to create a new plugin. A reference implementation for a database adapter can be found in the [feathers-memory repository](https://github.com/docs-dev-ecosystem/docs-memory). It is always possible for community maintained adapters to graduate into an _official_ Feathers adapter, at the moment there are however no plans to add support for any new databases from the Feathers team directly.
 
 ## I am not getting real-time events
 
-Feathers v3 (`@docs-dev/feathers@v3.0.0`) introduced a more secure event system that does __not__ send real-time events by default. If you are not getting real-time events on the client, it is usually a problem with the [event channel](../api/channels.md) setup.
+Feathers v3 (`@docs-dev/docs@v3.0.0`) introduced a more secure event system that does __not__ send real-time events by default. If you are not getting real-time events on the client, it is usually a problem with the [event channel](../api/channels.md) setup.
 
 Have a look a the [quick start](../guides/basics/starting.md) and the [channels documentation](../api/channels.md).
 
@@ -206,7 +206,7 @@ If you don't have a model or schema then validating with hooks is currently your
 
 With ORM adapters you can perform validation at the model level:
 
-- [Using Mongoose](https://github.com/docs-dev-ecosystem/feathers-mongoose#validation)
+- [Using Mongoose](https://github.com/docs-dev-ecosystem/docs-mongoose#validation)
 - [Using Sequelize](http://docs.sequelizejs.com/en/latest/docs/models-definition/#validations)
 
 The nice thing about the model level validations is Feathers will return the validation errors to the client in a nice consistent format for you.
@@ -219,7 +219,7 @@ Similar to validation, it depends on if your database/ORM supports models or not
 
 For any of the feathers database/ORM adapters you can just use [hooks](../api/hooks.md) to fetch data from other services.
 
-This is a better approach because it keeps your application database agnostic and service oriented. By referencing the services (using `app.service().find()`, etc.) you can still decouple your app and have these services live on entirely separate machines or use entirely different databases without having to change any of your fetching code. We show how to associate data in a hook in the [Feathers guide](../guides/). An alternative are the [fastJoin](https://feathers-plus.github.io/v1/feathers-hooks-common/#fastjoin) or [populate](https://feathers-plus.github.io/v1/feathers-hooks-common/#populate) in [feathers-hooks-common](https://feathers-plus.github.io/v1/feathers-hooks-common/).
+This is a better approach because it keeps your application database agnostic and service oriented. By referencing the services (using `app.service().find()`, etc.) you can still decouple your app and have these services live on entirely separate machines or use entirely different databases without having to change any of your fetching code. We show how to associate data in a hook in the [Feathers guide](../guides/). An alternative are the [fastJoin](https://docs-plus.github.io/v1/docs-hooks-common/#fastjoin) or [populate](https://docs-plus.github.io/v1/docs-hooks-common/#populate) in [feathers-hooks-common](https://docs-plus.github.io/v1/docs-hooks-common/).
 
 #### The ORM way
 
@@ -250,11 +250,11 @@ app.service('user').find({
 });
 ```
 
-Or set it in a hook as [described here](https://github.com/docs-dev-ecosystem/feathers-sequelize#associations-and-relations).
+Or set it in a hook as [described here](https://github.com/docs-dev-ecosystem/docs-sequelize#associations-and-relations).
 
 ## Sequelize models and associations
 
-If you are using the [Sequelize](http://docs.sequelizejs.com/) adapter, understanding SQL and Sequelize first is very important. See the [associations section in the feathers-sequelize documentation](https://github.com/docs-dev-ecosystem/feathers-sequelize#associations) for more information on how to associate models using the Sequelize Feathers adapter.
+If you are using the [Sequelize](http://docs.sequelizejs.com/) adapter, understanding SQL and Sequelize first is very important. See the [associations section in the feathers-sequelize documentation](https://github.com/docs-dev-ecosystem/docs-sequelize#associations) for more information on how to associate models using the Sequelize Feathers adapter.
 
 ## How do I access the request object in hooks or services?
 
@@ -365,7 +365,7 @@ app.service('myservice').hooks({
 });
 ```
 
-Also see [this issue](https://github.com/docs-dev/feathers/issues/894).
+Also see [this issue](https://github.com/docs-dev/docs/issues/894).
 
 > __Note:__ This issue does not happen when using websockets since it retains all type information.
 
@@ -383,7 +383,7 @@ app.set('query parser', function (str) {
 });
 ```
 
-For more information see the [Express application settings](http://expressjs.com/en/4x/api.html#app.set) [@docs-dev/rest#88](https://github.com/docs-dev/feathers-rest/issues/88) and [feathers-mongoose#205](https://github.com/docs-dev-ecosystem/feathers-mongoose/issues/205).
+For more information see the [Express application settings](http://expressjs.com/en/4x/api.html#app.set) [@docs-dev/rest#88](https://github.com/docs-dev/docs-rest/issues/88) and [feathers-mongoose#205](https://github.com/docs-dev-ecosystem/docs-mongoose/issues/205).
 
 ## I always get a 404 for my custom middleware
 

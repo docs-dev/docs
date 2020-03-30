@@ -2,8 +2,8 @@ module.exports = {
   title: 'docs-dev',
   description: 'A REST and real-time API layer for modern applications',
   themeConfig: {
-    logo: '/img/feathers-logo-wide.png',
-    repo: 'docs-dev/feathers',
+    logo: '/img/docs-logo-wide.png',
+    repo: 'docs-dev/docs',
     docsRepo: 'docs-dev/docs',
     docsBranch: 'master',
     editLinks: true,

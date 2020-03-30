@@ -1,7 +1,7 @@
 # Socket.io
 
 [![npm version](https://img.shields.io/npm/v/@docs-dev/socketio.svg?style=flat-square)](https://www.npmjs.com/package/@docs-dev/socketio)
-[![Changelog](https://img.shields.io/badge/changelog-.md-blue.svg?style=flat-square)](https://github.com/docs-dev/feathers/blob/master/packages/socketio/CHANGELOG.md)
+[![Changelog](https://img.shields.io/badge/changelog-.md-blue.svg?style=flat-square)](https://github.com/docs-dev/docs/blob/master/packages/socketio/CHANGELOG.md)
 
 ```
 $ npm install @docs-dev/socketio --save
@@ -20,7 +20,7 @@ The [@docs-dev/socketio](https://github.com/docs-dev/socketio) module allows to 
 Sets up the Socket.io transport with the default configuration using either the server provided by [app.listen](./application.md#listenport) or passed in [app.setup(server)](./application.md#setupserver).
 
 ```js
-const feathers = require('@docs-dev/feathers');
+const feathers = require('@docs-dev/docs');
 const socketio = require('@docs-dev/socketio');
 
 const app = feathers();
@@ -37,7 +37,7 @@ app.listen(3030);
 Sets up the Socket.io transport with the default configuration and call `callback` with the [Socket.io server object](http://socket.io/docs/server-api/). This is a good place to listen to custom events or add [authorization](https://github.com/LearnBoost/socket.io/wiki/Authorizing):
 
 ```js
-const feathers = require('@docs-dev/feathers');
+const feathers = require('@docs-dev/docs');
 const socketio = require('@docs-dev/socketio');
 
 const app = feathers();
@@ -69,7 +69,7 @@ This can be used to e.g. configure the path where Socket.io is initialize (`sock
 
 
 ```js
-const feathers = require('@docs-dev/feathers');
+const feathers = require('@docs-dev/docs');
 const socketio = require('@docs-dev/socketio');
 
 const app = feathers();
@@ -89,7 +89,7 @@ app.listen(3030);
 Creates a new Socket.io server on a separate port. Options and a callback are optional and work as described above.
 
 ```js
-const feathers = require('@docs-dev/feathers');
+const feathers = require('@docs-dev/docs');
 const socketio = require('@docs-dev/socketio');
 
 const app = feathers();

@@ -22,7 +22,7 @@ If none of those work it's a very real possibility that we screwed something up 
 
 [Join the Slack group >](http://slack.docs-dev.com/)
 
-[Submit your issue to GitHub >](https://github.com/docs-dev/feathers/issues/new) 
+[Submit your issue to GitHub >](https://github.com/docs-dev/docs/issues/new) 
 
 [Ask on StackOverflow using the `docs-dev` tag >](http://stackoverflow.com)
 

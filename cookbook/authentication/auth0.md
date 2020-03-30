@@ -62,7 +62,7 @@ module.exports = app => {
 In `src/authentication.ts` like this:
 
 ```ts
-import { ServiceAddons, Params } from '@docs-dev/feathers';
+import { ServiceAddons, Params } from '@docs-dev/docs';
 import { AuthenticationService, JWTStrategy } from '@docs-dev/authentication';
 import { LocalStrategy } from '@docs-dev/authentication-local';
 import { expressOauth, OAuthStrategy, OAuthProfile } from '@docs-dev/authentication-oauth';

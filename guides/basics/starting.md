@@ -32,10 +32,10 @@ tsc --init --target es2018
 
 ## Installing Feathers
 
-Feathers can be installed like any other Node module by installing the [@docs-dev/feathers](https://www.npmjs.com/package/@docs-dev/feathers) package through [npm](https://www.npmjs.com). The same package can also be used with a module loader like Webpack or Browserify and in React Native.
+Feathers can be installed like any other Node module by installing the [@docs-dev/docs](https://www.npmjs.com/package/@docs-dev/docs) package through [npm](https://www.npmjs.com). The same package can also be used with a module loader like Webpack or Browserify and in React Native.
 
 ```sh
-npm install @docs-dev/feathers --save
+npm install @docs-dev/docs --save
 ```
 
 > __Note:__ All Feathers core modules are in the `@docs-dev` namespace.
@@ -49,7 +49,7 @@ Now we can create a Feathers application with a simple messages service that all
 Create a file called `app.js` with the following content:
 
 ```js
-const feathers = require('@docs-dev/feathers');
+const feathers = require('@docs-dev/docs');
 const app = feathers();
 
 // A messages service that allows to create new
@@ -112,7 +112,7 @@ main();
 Create a file called `app.ts` with the following content:
 
 ```ts
-import feathers from '@docs-dev/feathers';
+import feathers from '@docs-dev/docs';
 
 // This is the interface for the message data
 interface Message {
@@ -224,7 +224,7 @@ npm install @docs-dev/socketio @docs-dev/express --save
 Update `app.js` with the following content:
 
 ```js
-const feathers = require('@docs-dev/feathers');
+const feathers = require('@docs-dev/docs');
 const express = require('@docs-dev/express');
 const socketio = require('@docs-dev/socketio');
 
@@ -297,7 +297,7 @@ app.service('messages').create({
 Update `app.ts` with the following content:
 
 ```js
-import feathers from '@docs-dev/feathers';
+import feathers from '@docs-dev/docs';
 import '@docs-dev/transport-commons';
 import express from '@docs-dev/express';
 import socketio from '@docs-dev/socketio';
@@ -405,8 +405,8 @@ Now we can look at one of the really cool features of Feathers. It works the sam
 <head>
   <meta charset="UTF-8">
   <title>Feathers Example</title>
-<link rel="stylesheet" href="//unpkg.com/feathers-chat@4.0.0/public/base.css">
-    <link rel="stylesheet" href="//unpkg.com/feathers-chat@4.0.0/public/chat.css">
+<link rel="stylesheet" href="//unpkg.com/docs-chat@4.0.0/public/base.css">
+    <link rel="stylesheet" href="//unpkg.com/docs-chat@4.0.0/public/chat.css">
 </head>
 <body>
   <main id="main" class="container">
@@ -419,7 +419,7 @@ Now we can look at one of the really cool features of Feathers. It works the sam
     <h2>Here are the current messages:</h2>
   </main>
 
-  <script src="//unpkg.com/@docs-dev/client@^4.3.0/dist/feathers.js"></script>
+  <script src="//unpkg.com/@docs-dev/client@^4.3.0/dist/docs.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
   <script type="text/javascript">
     // Set up socket.io

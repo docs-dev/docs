@@ -63,7 +63,7 @@ module.exports = app => {
 
 ::: tab "TypeScript"
 ```typescript
-import { Application } from '@docs-dev/feathers';
+import { Application } from '@docs-dev/docs';
 import { AuthenticationService, JWTStrategy } from '@docs-dev/authentication';
 import { LocalStrategy } from '@docs-dev/authentication-local';
 import { expressOauth } from '@docs-dev/authentication-oauth';
@@ -205,7 +205,7 @@ Any Feathers application now allows to register a service at the root level with
 app.use('/', myService);
 ```
 
-It will be available via `app.service('/')` through the client and directly at `http://feathers-server.com/` via REST.
+It will be available via `app.service('/')` through the client and directly at `http://docs-server.com/` via REST.
 
 ### Skip event emitting
 
@@ -232,14 +232,14 @@ app.on('disconnect', connection => {
 
 ### Deprecated `(context, next)` and SKIP functionality
 
-In preparation to support Koa style hooks (see [docs-dev/feathers#932](https://github.com/docs-dev/feathers/issues/932)) returning `SKIP` and calling the deprecated `next` function in hooks has been removed. Returning `SKIP` in hooks was causing issues because
+In preparation to support Koa style hooks (see [docs-dev/docs#932](https://github.com/docs-dev/docs/issues/932)) returning `SKIP` and calling the deprecated `next` function in hooks has been removed. Returning `SKIP` in hooks was causing issues because
 
 - It is not easily possible to see if a hook makes its following hooks skip. This made hook chains very hard to debug.
 - Returning SKIP also causes problems with Feathers internals like the event system
 
 The use-cases for `feathers.SKIP` can now be explicitly handled by
 
-- [Running hooks conditionally](https://feathers-plus.github.io/v1/feathers-hooks-common/#iff) through a flag
+- [Running hooks conditionally](https://docs-plus.github.io/v1/docs-hooks-common/#iff) through a flag
 - [Calling the hook-less service methods](#hook-less-service-methods) of the database adapters
 - Setting `context.event = null` to skip event emitting
 

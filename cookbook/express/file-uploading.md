@@ -16,7 +16,7 @@ We want to implement an upload service to accomplish a few important things:
 
 The plan is to upload the files to a feathers service so we can take advantage of hooks for authentication, authorization and validation, and for service events.
 
-Fortunately, there exists a file storage service: [feathers-blob](https://github.com/docs-dev/feathers-blob). With it we can meet our goals, but (spoiler alert) it isn't an ideal solution.  We discuss some of its problems below.
+Fortunately, there exists a file storage service: [feathers-blob](https://github.com/docs-dev/docs-blob). With it we can meet our goals, but (spoiler alert) it isn't an ideal solution.  We discuss some of its problems below.
 
 
 ## Basic upload with feathers-blob and feathers-client
@@ -28,7 +28,7 @@ Lets look at the server code:
 ```javascript
 /* --- server.js --- */
 
-const feathers = require('@docs-dev/feathers');
+const feathers = require('@docs-dev/docs');
 const express = require('@docs-dev/express');
 const socketio = require('feathers-socketio');
 
@@ -139,7 +139,7 @@ Or we can implement a very basic frontend with `feathers-client` and `jQuery`:
         <title>docs-dev File Upload</title>
         <script   src='https://code.jquery.com/jquery-2.2.3.min.js'   integrity='sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo='   crossorigin='anonymous'></script>
         <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/core-js/2.1.4/core.min.js'></script>
-        <script type='text/javascript' src='//unpkg.com/feathers-client@^2.0.0/dist/feathers.js'></script>
+        <script type='text/javascript' src='//unpkg.com/docs-client@^2.0.0/dist/docs.js'></script>
         <script type='text/javascript'>
             // feathers client initialization
             const rest = feathers.rest('http://localhost:3030');
@@ -294,7 +294,7 @@ Here is an example using dropzone:
 
         <script type='text/javascript' src='socket.io/socket.io.js'></script>
         <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/core-js/2.1.4/core.min.js'></script>
-        <script type='text/javascript' src='//unpkg.com/feathers-client@^2.0.0/dist/feathers.js'></script>
+        <script type='text/javascript' src='//unpkg.com/docs-client@^2.0.0/dist/docs.js'></script>
         <script type='text/javascript'>
             // feathers client initialization
             var socket = io('http://localhost:3030');
@@ -330,7 +330,7 @@ Here is an example using dropzone:
 </html>
 ```
 
-All the code is available via github here: https://github.com/CianCoders/feathers-example-fileupload
+All the code is available via github here: https://github.com/CianCoders/docs-example-fileupload
 
 
 Hope you have learned something today, as I learned a lot writing this.

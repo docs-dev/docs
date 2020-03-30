@@ -34,7 +34,7 @@ app.service('messages').hooks({
 :::
 ::: tab "TypeScript"
 ```ts
-import { HookContext } from '@docs-dev/feathers';
+import { HookContext } from '@docs-dev/docs';
 
 const createdAt = async (context: HookContext) => {
   context.data.createdAt = new Date();
@@ -78,7 +78,7 @@ app.service('messages').hooks({
 :::
 ::: tab "TypeScript"
 ```ts
-import { HookContext } from '@docs-dev/feathers';
+import { HookContext } from '@docs-dev/docs';
 
 const setTimestamp = (name: string) => {
   return async (context: HookContext) => {
@@ -267,7 +267,7 @@ Update `src/hooks/process-message.ts` to look like this:
 ```js
 // Use this hook to manipulate incoming or outgoing data.
 // For more information on hooks see: http://docs.docs-dev.com/api/hooks.html
-import { Hook, HookContext } from '@docs-dev/feathers';
+import { Hook, HookContext } from '@docs-dev/docs';
 
 export default () : Hook => {
   return async (context: HookContext) => {
@@ -367,7 +367,7 @@ Update `src/hooks/populate-user.ts` to:
 ```ts
 // Use this hook to manipulate incoming or outgoing data.
 // For more information on hooks see: http://docs.docs-dev.com/api/hooks.html
-import { Hook, HookContext } from '@docs-dev/feathers';
+import { Hook, HookContext } from '@docs-dev/docs';
 
 export default (): Hook => {
   return async (context: HookContext) => {

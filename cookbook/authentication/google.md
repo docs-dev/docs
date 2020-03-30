@@ -42,14 +42,14 @@ The property 'nonce', according to the documentation: "A random value generated 
 
 The client id (App ID) and secret can be acquired by creating a [OAuth client ID](https://console.developers.google.com/apis/credentials):
 1. Click on 'OAuth client ID'
-![Creating OAuth client ID - step 1](https://bartduisters.com/img/feathers/oauth-client-id-1.png)
+![Creating OAuth client ID - step 1](https://bartduisters.com/img/docs/oauth-client-id-1.png)
 2. Select 'web application', fill in the information and click 'Create'
-![Creating OAuth client ID - step 2](https://bartduisters.com/img/feathers/oauth-client-id-2.png)
+![Creating OAuth client ID - step 2](https://bartduisters.com/img/docs/oauth-client-id-2.png)
 
 **Important**: Fill in the callback url, in a default Feathers setup it will be /oauth/google/callback.
 
 3. Replace <App ID> and <App Secret> with the id and secret of the created OAuth client ID application
-![Creating OAuth client ID - step 3](https://bartduisters.com/img/feathers/oauth-client-id-3.png)
+![Creating OAuth client ID - step 3](https://bartduisters.com/img/docs/oauth-client-id-3.png)
 ```js
 {
   "authentication": {

@@ -3,7 +3,7 @@
 ## @docs-dev/socketio-client
 
 [![npm version](https://img.shields.io/npm/v/@docs-dev/client.svg?style=flat-square)](https://www.npmjs.com/package/@docs-dev/socketio-client)
-[![Changelog](https://img.shields.io/badge/changelog-.md-blue.svg?style=flat-square)](https://github.com/docs-dev/feathers/blob/master/packages/socketio-client/CHANGELOG.md)
+[![Changelog](https://img.shields.io/badge/changelog-.md-blue.svg?style=flat-square)](https://github.com/docs-dev/docs/blob/master/packages/socketio-client/CHANGELOG.md)
 
 ```
 $ npm install @docs-dev/socketio-client --save
@@ -25,7 +25,7 @@ Initialize the Socket.io client using a given socket and the default options.
 
 ::: tab "Modular"
 ``` javascript
-const feathers = require('@docs-dev/feathers');
+const feathers = require('@docs-dev/docs');
 const socketio = require('@docs-dev/socketio-client');
 const io = require('socket.io-client');
 
@@ -49,7 +49,7 @@ app.service('messages').create({
 ::: tab "@docs-dev/client"
 ``` html
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/core-js/2.1.4/core.min.js"></script>
-<script src="//unpkg.com/@docs-dev/client@^3.0.0/dist/feathers.js"></script>
+<script src="//unpkg.com/@docs-dev/client@^3.0.0/dist/docs.js"></script>
 <script src="//unpkg.com/socket.io-client@1.7.3/dist/socket.io.js"></script>
 <script>
   // Socket.io is exposed as the `io` global.
@@ -86,7 +86,7 @@ Options can be:
 - `timeout` (default: 5000ms) - The time after which a method call fails and times out. This usually happens when calling a service or service method that does not exist.
 
 ```js
-const feathers = require('@docs-dev/feathers');
+const feathers = require('@docs-dev/docs');
 const socketio = require('@docs-dev/socketio-client');
 const io = require('socket.io-client');
 

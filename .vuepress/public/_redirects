@@ -8,19 +8,19 @@ https://crow.docs.docs-dev.com/* https://docs.docs-dev.com/:splat 301!
 /guides/advanced/configuration.html         /api/configuration.html
 /api/rest.html                              /api/express.html
 
-/api/authentication/local-management.html   https://github.com/feathers-plus/feathers-authentication-management/blob/master/docs.md
-/api/authentication/hooks.html              https://github.com/docs-dev-ecosystem/feathers-authentication-hooks
-/api/hooks-common.html                      https://feathers-plus.github.io/v1/feathers-hooks-common/
+/api/authentication/local-management.html   https://github.com/docs-plus/docs-authentication-management/blob/master/docs.md
+/api/authentication/hooks.html              https://github.com/docs-dev-ecosystem/docs-authentication-hooks
+/api/hooks-common.html                      https://docs-plus.github.io/v1/docs-hooks-common/
 
-/api/databases/memory.html                  https://github.com/docs-dev-ecosystem/feathers-memory
-/api/databases/localstorage.html            https://github.com/docs-dev-ecosystem/feathers-localstorage
-/api/databases/nedb.html                    https://github.com/docs-dev-ecosystem/feathers-nedb
-/api/databases/mongodb.html                 https://github.com/docs-dev-ecosystem/feathers-mongodb
-/api/databases/mongoose.html                https://github.com/docs-dev-ecosystem/feathers-mongoose
-/api/databases/knexjs.html                  https://github.com/docs-dev-ecosystem/feathers-knex
-/api/databases/sequelize.html               https://github.com/docs-dev-ecosystem/feathers-sequelize
-/api/databases/elasticsearch.html           https://github.com/docs-dev-ecosystem/feathers-elasticsearch
-/api/databases/rethinkdb.html               https://github.com/docs-dev-ecosystem/feathers-rethinkdb
+/api/databases/memory.html                  https://github.com/docs-dev-ecosystem/docs-memory
+/api/databases/localstorage.html            https://github.com/docs-dev-ecosystem/docs-localstorage
+/api/databases/nedb.html                    https://github.com/docs-dev-ecosystem/docs-nedb
+/api/databases/mongodb.html                 https://github.com/docs-dev-ecosystem/docs-mongodb
+/api/databases/mongoose.html                https://github.com/docs-dev-ecosystem/docs-mongoose
+/api/databases/knexjs.html                  https://github.com/docs-dev-ecosystem/docs-knex
+/api/databases/sequelize.html               https://github.com/docs-dev-ecosystem/docs-sequelize
+/api/databases/elasticsearch.html           https://github.com/docs-dev-ecosystem/docs-elasticsearch
+/api/databases/rethinkdb.html               https://github.com/docs-dev-ecosystem/docs-rethinkdb
 
 /guides/advanced/debugging.html             https://blog.docs-dev.com/debugging-feathers-with-visual-studio-code-406e6adf2882
 /guides/about/philosophy.html               https://blog.docs-dev.com/why-we-built-the-best-web-framework-you-ve-probably-never-heard-of-until-now-176afc5c6aac

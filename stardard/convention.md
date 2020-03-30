@@ -46,7 +46,7 @@ app.use('/my-service', new MyService());
 
 ::: tab "Class(TS)"
 ```typescript
-import { ServiceMethods, Params, Id, NullableId } from "@docs-dev/feathers";
+import { ServiceMethods, Params, Id, NullableId } from "@docs-dev/docs";
 import { Application } from "../../declarations";
 
 class MyService implements ServiceMethods<any> {
@@ -201,7 +201,7 @@ For services registered before `app.listen` is invoked, the `setup` function of 
 `setup` is a great place to initialize your service with any special configuration or if connecting services that are very tightly coupled (see below).
 
 ```js
-const feathers = require('@docs-dev/feathers');
+const feathers = require('@docs-dev/docs');
 const { rest } = require('@docs-dev/express');
 
 class MessageService {

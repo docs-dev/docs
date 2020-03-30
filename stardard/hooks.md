@@ -14,7 +14,7 @@ The following example adds a `createdAt` and `updatedAt` property before saving 
 
 ::: tab "JavaScript"
 ```js
-const feathers = require('@docs-dev/feathers');
+const feathers = require('@docs-dev/docs');
 
 const app = feathers();
 
@@ -51,7 +51,7 @@ app.service('messages').hooks({
 
 ::: tab "TypeScript"
 ```js
-import { default as feathers, HookContext } from '@docs-dev/feathers';
+import { default as feathers, HookContext } from '@docs-dev/docs';
 
 const app = feathers();
 

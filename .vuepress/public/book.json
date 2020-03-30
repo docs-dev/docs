@@ -29,7 +29,7 @@
       "deep": true
     },
     "versions": {
-      "gitbookConfigURL": "https://rawgit.com/docs-dev/feathers-docs/master/book.json",
+      "gitbookConfigURL": "https://rawgit.com/docs-dev/docs-docs/master/book.json",
       "options": [
         {
           "value": "https://crow.docs.docs-dev.com",

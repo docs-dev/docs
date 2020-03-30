@@ -10,12 +10,12 @@ If you want to learn how to use Feathers as a client in Node.js, React Native, o
 
 The [Feathers Chat application](../guides/) from guide gives a basic intro to using the Feathers Client in a vanilla JavaScript environment. That's a good place to start to see how things fit together. Framework specific repositories can be found at:
 
-- JavaScript + plain JS frontend: [docs-dev/feathers-chat](https://github.com/docs-dev/feathers-chat)
-- TypeScript + plain JS frontend: [docs-dev/feathers-chat-ts](https://github.com/docs-dev/feathers-chat-ts)
-- React: [docs-dev-ecosystem/feathers-chat-react](https://github.com/docs-dev-ecosystem/feathers-chat-react)
-- React Native: [docs-dev-ecosystem/feathers-react-native-chat](https://github.com/docs-dev-ecosystem/feathers-react-native-chat)
-- Angular: [docs-dev-ecosystem/feathers-chat-angular](https://github.com/docs-dev-ecosystem/feathers-chat-angular)
-- VueJS with Vuex: [feathers-plus/feathers-chat-vuex](https://github.com/feathers-plus/feathers-chat-vuex)
+- JavaScript + plain JS frontend: [docs-dev/docs-chat](https://github.com/docs-dev/docs-chat)
+- TypeScript + plain JS frontend: [docs-dev/docs-chat-ts](https://github.com/docs-dev/docs-chat-ts)
+- React: [docs-dev-ecosystem/docs-chat-react](https://github.com/docs-dev-ecosystem/docs-chat-react)
+- React Native: [docs-dev-ecosystem/docs-react-native-chat](https://github.com/docs-dev-ecosystem/docs-react-native-chat)
+- Angular: [docs-dev-ecosystem/docs-chat-angular](https://github.com/docs-dev-ecosystem/docs-chat-angular)
+- VueJS with Vuex: [feathers-plus/docs-chat-vuex](https://github.com/docs-plus/docs-chat-vuex)
 
 ## Examples
 

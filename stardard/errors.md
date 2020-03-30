@@ -1,7 +1,7 @@
 # Errors
 
 [![npm version](https://img.shields.io/npm/v/@docs-dev/errors.svg?style=flat-square)](https://www.npmjs.com/package/@docs-dev/errors)
-[![Changelog](https://img.shields.io/badge/changelog-.md-blue.svg?style=flat-square)](https://github.com/docs-dev/feathers/blob/master/packages/errors/CHANGELOG.md)
+[![Changelog](https://img.shields.io/badge/changelog-.md-blue.svg?style=flat-square)](https://github.com/docs-dev/docs/blob/master/packages/errors/CHANGELOG.md)
 
 ```
 $ npm install @docs-dev/errors --save

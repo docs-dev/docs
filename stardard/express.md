@@ -1,7 +1,7 @@
 # Express
 
 [![npm version](https://img.shields.io/npm/v/@docs-dev/express.svg?style=flat-square)](https://www.npmjs.com/package/@docs-dev/express)
-[![Changelog](https://img.shields.io/badge/changelog-.md-blue.svg?style=flat-square)](https://github.com/docs-dev/feathers/blob/master/packages/express/CHANGELOG.md)
+[![Changelog](https://img.shields.io/badge/changelog-.md-blue.svg?style=flat-square)](https://github.com/docs-dev/docs/blob/master/packages/express/CHANGELOG.md)
 
 ```
 $ npm install @docs-dev/express --save
@@ -24,7 +24,7 @@ const express = require('@docs-dev/express');
 `express(app) -> app` is a function that turns a [Feathers application](./application.md) into a fully Express (4+) compatible application that additionally to Feathers functionality also lets you use the [Express API](http://expressjs.com/en/4x/api.html).
 
 ```js
-const feathers = require('@docs-dev/feathers');
+const feathers = require('@docs-dev/docs');
 const express = require('@docs-dev/express');
 
 // Create an app that is a Feathers AND Express application
@@ -92,7 +92,7 @@ server.on('listening', () => console.log('Feathers application started'));
 When registering an application as a sub-app, `app.setup(server)` has to be called to initialize the sub-apps services.
 
 ```js
-const feathers = require('@docs-dev/feathers');
+const feathers = require('@docs-dev/docs');
 const express = require('@docs-dev/express');
 
 const api = express(feathers())
@@ -117,7 +117,7 @@ HTTPS requires creating a separate server in which case `app.setup(server)` also
 const fs = require('fs');
 const https  = require('https');
 
-const feathers = require('@docs-dev/feathers');
+const feathers = require('@docs-dev/docs');
 const express = require('@docs-dev/express');
 
 const app = express(feathers());
@@ -138,7 +138,7 @@ The [vhost](https://github.com/expressjs/vhost) Express middleware can be used t
 ```js
 const vhost = require('vhost');
 
-const feathers = require('@docs-dev/feathers');
+const feathers = require('@docs-dev/docs');
 const express = require('@docs-dev/express');
 
 const app = express(feathers());
@@ -176,7 +176,7 @@ To expose services through a RESTful API we will have to configure `express.rest
 Configures the transport provider with a standard formatter sending JSON response via [res.json](http://expressjs.com/en/4x/api.html#res.json).
 
 ```js
-const feathers = require('@docs-dev/feathers');
+const feathers = require('@docs-dev/docs');
 const express = require('@docs-dev/express');
 
 // Create an Express compatible Feathers application
@@ -195,7 +195,7 @@ app.configure(express.rest())
 The default REST response formatter is a middleware that formats the data retrieved by the service as JSON. If you would like to configure your own `formatter` middleware pass a `formatter(req, res)` function. This middleware will have access to `res.data` which is the data returned by the service. [res.format](http://expressjs.com/en/4x/api.html#res.format) can be used for content negotiation.
 
 ```js
-const feathers = require('@docs-dev/feathers');
+const feathers = require('@docs-dev/docs');
 const express = require('@docs-dev/express');
 
 const app = express(feathers());
@@ -269,7 +269,7 @@ app.use('/todos', todoService, function(req, res) {
 All middleware registered after the [REST transport](#express-rest) will have access to the `req.feathers` object to set properties on the service method `params`:
 
 ```js
-const feathers = require('@docs-dev/feathers');
+const feathers = require('@docs-dev/docs');
 const express = require('@docs-dev/express');
 const bodyParser = require('body-parser');
 
@@ -376,7 +376,7 @@ app.use(errorHandler());
 Set up the error handler with the default configuration.
 
 ```js
-const feathers = require('@docs-dev/feathers');
+const feathers = require('@docs-dev/docs');
 const express = require('@docs-dev/express');
 
 const app = express(feathers());
@@ -388,7 +388,7 @@ app.use(express.errorHandler())
 ### `app.use(express.errorHandler(options))`
 
 ```js
-const feathers = require('@docs-dev/feathers');
+const feathers = require('@docs-dev/docs');
 const express = require('@docs-dev/express');
 
 const app = express(feathers());
@@ -450,7 +450,7 @@ Express route placeholders in a service URL will be added to the services `param
 > __Important:__ See the [FAQ entry on nested routes](../help/faq.md#how-do-i-do-nested-or-custom-routes) for more details on when and when not to use nested routes.
 
 ```js
-const feathers = require('@docs-dev/feathers');
+const feathers = require('@docs-dev/docs');
 const express = require('@docs-dev/express');
 
 const app = express(feathers());

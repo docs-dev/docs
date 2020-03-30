@@ -1,7 +1,7 @@
 # Primus
 
 [![npm version](https://img.shields.io/npm/v/@docs-dev/primus.svg?style=flat-square)](https://www.npmjs.com/package/@docs-dev/primus)
-[![Changelog](https://img.shields.io/badge/changelog-.md-blue.svg?style=flat-square)](https://github.com/docs-dev/feathers/blob/master/packages/primus/CHANGELOG.md)
+[![Changelog](https://img.shields.io/badge/changelog-.md-blue.svg?style=flat-square)](https://github.com/docs-dev/docs/blob/master/packages/primus/CHANGELOG.md)
 
 ```
 $ npm install @docs-dev/primus --save
@@ -26,7 +26,7 @@ Sets up the Primus transport with the given [Primus options](https://github.com/
 > **Pro tip:** Once the server has been started with `app.listen()` or `app.setup(server)` the Primus server object is available as `app.primus`.
 
 ```js
-const feathers = require('@docs-dev/feathers');
+const feathers = require('@docs-dev/docs');
 const primus = require('@docs-dev/primus');
 
 const app = feathers();
@@ -42,7 +42,7 @@ app.listen(3030);
 Sets up the Primus transport with the given [Primus options](https://github.com/primus/primus) and calls the callback with the Primus server instance.
 
 ```js
-const feathers = require('@docs-dev/feathers');
+const feathers = require('@docs-dev/docs');
 const primus = require('@docs-dev/primus');
 
 const app = feathers();

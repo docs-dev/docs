@@ -1,7 +1,7 @@
 # Local
 
 [![npm version](https://img.shields.io/npm/v/@docs-dev/authentication-local.svg?style=flat-square)](https://www.npmjs.com/package/@docs-dev/authentication-local)
-[![Changelog](https://img.shields.io/badge/changelog-.md-blue.svg?style=flat-square)](https://github.com/docs-dev/feathers/blob/master/packages/authentication-local/CHANGELOG.md)
+[![Changelog](https://img.shields.io/badge/changelog-.md-blue.svg?style=flat-square)](https://github.com/docs-dev/docs/blob/master/packages/authentication-local/CHANGELOG.md)
 
 ```
 $ npm install @docs-dev/authentication-local --save
@@ -106,7 +106,7 @@ module.exports = app => {
 
 ::: tab "TypeScript"
 ```typescript
-import { Application, Params, Query } from '@docs-dev/feathers';
+import { Application, Params, Query } from '@docs-dev/docs';
 import { AuthenticationService, JWTStrategy } from '@docs-dev/authentication';
 import { LocalStrategy } from '@docs-dev/authentication-local';
 

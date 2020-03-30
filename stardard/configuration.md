@@ -1,7 +1,7 @@
 # Configuration
 
 [![npm version](https://img.shields.io/npm/v/@docs-dev/configuration.svg?style=flat-square)](https://www.npmjs.com/package/@docs-dev/configuration)
-[![Changelog](https://img.shields.io/badge/changelog-.md-blue.svg?style=flat-square)](https://github.com/docs-dev/feathers/blob/master/packages/configuration/CHANGELOG.md)
+[![Changelog](https://img.shields.io/badge/changelog-.md-blue.svg?style=flat-square)](https://github.com/docs-dev/docs/blob/master/packages/configuration/CHANGELOG.md)
 
 ```
 $ npm install @docs-dev/configuration --save
@@ -19,7 +19,7 @@ As per the [config docs](https://github.com/lorenwest/node-config/wiki/Configura
 The `@docs-dev/configuration` module is an app configuration function that takes a root directory (usually something like `__dirname` in your application) and the configuration folder (set to `config` by default):
 
 ```js
-const feathers = require('@docs-dev/feathers');
+const feathers = require('@docs-dev/docs');
 const configuration = require('@docs-dev/configuration');
 
 // Use the application root and `config/` as the configuration folder
@@ -81,7 +81,7 @@ In `config/production.json` we are going to use environment variables (e.g. set 
 Now it can be used in our `app.js` like this:
 
 ```js
-const feathers = require('@docs-dev/feathers');
+const feathers = require('@docs-dev/docs');
 const configuration = require('@docs-dev/configuration');
 
 const app = feathers().configure(configuration());

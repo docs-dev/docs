@@ -21,7 +21,7 @@ Below is an example of adding clustering to feathers with the `feathers-socketio
 
 ```js
 import cluster from 'cluster';
-import feathers from '@docs-dev/feathers';
+import feathers from '@docs-dev/docs';
 import socketio from '@docs-dev/socketio';
 
 const CLUSTER_COUNT = 4;

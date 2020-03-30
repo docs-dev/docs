@@ -1,7 +1,7 @@
 # Client
 
 [![npm version](https://img.shields.io/npm/v/@docs-dev/authentication-client.svg?style=flat-square)](https://www.npmjs.com/package/@docs-dev/authentication-client)
-[![Changelog](https://img.shields.io/badge/changelog-.md-blue.svg?style=flat-square)](https://github.com/docs-dev/feathers/blob/master/packages/authentication-client/CHANGELOG.md)
+[![Changelog](https://img.shields.io/badge/changelog-.md-blue.svg?style=flat-square)](https://github.com/docs-dev/docs/blob/master/packages/authentication-client/CHANGELOG.md)
 
 ```
 npm install @docs-dev/authentication-client --save
@@ -24,7 +24,7 @@ The `@docs-dev/authentication-client` module allows you to easily authenticate a
 ## Setup
 
 ```js
-const feathers = require('@docs-dev/feathers');
+const feathers = require('@docs-dev/docs');
 const socketio = require('@docs-dev/socketio-client');
 const io = require('socket.io-client');
 const auth = require('@docs-dev/authentication-client');
@@ -154,7 +154,7 @@ The internal method called when using [app.logout()](#app-logout).
 The [AuthenticationClient]() can be extended to provide custom functionality and then passed during initialization:
 
 ```js
-const feathers = require('@docs-dev/feathers');
+const feathers = require('@docs-dev/docs');
 const socketio = require('@docs-dev/socketio-client');
 const io = require('socket.io-client');
 const auth = require('@docs-dev/authentication-client');

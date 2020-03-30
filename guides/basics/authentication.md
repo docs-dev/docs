@@ -99,13 +99,13 @@ When using Feathers on the client, the authentication client does all those auth
       content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0" />
     <title>docs-dev chat</title>
     <link rel="shortcut icon" href="favicon.ico">
-    <link rel="stylesheet" href="//unpkg.com/feathers-chat@4.0.0/public/base.css">
-    <link rel="stylesheet" href="//unpkg.com/feathers-chat@4.0.0/public/chat.css">
+    <link rel="stylesheet" href="//unpkg.com/docs-chat@4.0.0/public/base.css">
+    <link rel="stylesheet" href="//unpkg.com/docs-chat@4.0.0/public/chat.css">
   </head>
   <body>
     <div id="app" class="flex flex-column"></div>
     <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.12.0/moment.js"></script>
-    <script src="//unpkg.com/@docs-dev/client@^4.3.0/dist/feathers.js"></script>
+    <script src="//unpkg.com/@docs-dev/client@^4.3.0/dist/docs.js"></script>
     <script src="/socket.io/socket.io.js"></script>
     <script src="app.js"></script>
   </body>
@@ -232,7 +232,7 @@ module.exports = app => {
 Update `src/authentication.ts` as follows:
 
 ```ts
-import { ServiceAddons, Params } from '@docs-dev/feathers';
+import { ServiceAddons, Params } from '@docs-dev/docs';
 import { AuthenticationService, JWTStrategy } from '@docs-dev/authentication';
 import { LocalStrategy } from '@docs-dev/authentication-local';
 import { expressOauth, OAuthStrategy, OAuthProfile } from '@docs-dev/authentication-oauth';

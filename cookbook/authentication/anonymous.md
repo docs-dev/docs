@@ -25,7 +25,7 @@ module.exports = app => {
 :::
 ::: tab "TypeScript"
 ```ts
-import { Params } from '@docs-dev/feathers';
+import { Params } from '@docs-dev/docs';
 import { AuthenticationBaseStrategy, AuthenticationResult } from '@docs-dev/authentication';
 
 class AnonymousStrategy extends AuthenticationBaseStrategy {
@@ -71,7 +71,7 @@ module.exports = function (options = {}) { // eslint-disable-line no-unused-vars
 :::
 ::: tab "TypeScript"
 ```ts
-import { Hook, HookContext } from '@docs-dev/feathers';
+import { Hook, HookContext } from '@docs-dev/docs';
 
 export default (): Hook => {
   return async (context: HookContext) => {

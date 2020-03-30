@@ -2,9 +2,9 @@
 
 As we have seen [when getting started](./starting.md), Feathers works great in the browser and comes with client services that allow to easily connect to a Feathers server.
 
-In this chapter we will create a real-time chat frontend with signup and login using modern plain JavaScript. It will only work in the latest versions of Chrome, Firefox, Safari and Edge since we won't be using a transpiler like Webpack or Babel (which is also why there won't be a TypeScript option). The final version can be found [here](https://github.com/docs-dev/feathers-chat/).
+In this chapter we will create a real-time chat frontend with signup and login using modern plain JavaScript. It will only work in the latest versions of Chrome, Firefox, Safari and Edge since we won't be using a transpiler like Webpack or Babel (which is also why there won't be a TypeScript option). The final version can be found [here](https://github.com/docs-dev/docs-chat/).
 
-![The Feathers chat application](./assets/feathers-chat.png)
+![The Feathers chat application](./assets/docs-chat.png)
 
 > __Note:__ We will not be using a frontend framework so we can focus on what Feathers is all about. Feathers is framework agnostic and can be used with any frontend framework like React, VueJS or Angular. For more information see the [frameworks section](../frameworks.md).
 
@@ -20,13 +20,13 @@ First, let's update `public/index.html` to initialize everything we need for the
       content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0" />
     <title>docs-dev chat</title>
     <link rel="shortcut icon" href="favicon.ico">
-    <link rel="stylesheet" href="//unpkg.com/feathers-chat@4.0.0/public/base.css">
-    <link rel="stylesheet" href="//unpkg.com/feathers-chat@4.0.0/public/chat.css">
+    <link rel="stylesheet" href="//unpkg.com/docs-chat@4.0.0/public/base.css">
+    <link rel="stylesheet" href="//unpkg.com/docs-chat@4.0.0/public/chat.css">
   </head>
   <body>
     <div id="app" class="flex flex-column"></div>
     <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.12.0/moment.js"></script>
-    <script src="//unpkg.com/@docs-dev/client@^4.3.0/dist/feathers.js"></script>
+    <script src="//unpkg.com/@docs-dev/client@^4.3.0/dist/docs.js"></script>
     <script src="/socket.io/socket.io.js"></script>
     <script src="app.js"></script>
   </body>
@@ -101,7 +101,7 @@ const loginHTML = `<main class="login container">
 const chatHTML = `<main class="flex flex-column">
   <header class="title-bar flex flex-row flex-center">
     <div class="title-wrapper block center-element">
-      <img class="logo" src="http://docs-dev.com/img/feathers-logo-wide.png"
+      <img class="logo" src="http://docs-dev.com/img/docs-logo-wide.png"
         alt="Feathers Logo">
       <span class="title">Chat</span>
     </div>
@@ -348,10 +348,10 @@ If you run into an issue, remember you can find the complete working example at
 
 :::: tabs :options="{ useUrlFragment: false }"
 ::: tab "JavaScript"
-The [docs-dev/feathers-chat](https://github.com/docs-dev/feathers-chat) repository
+The [docs-dev/docs-chat](https://github.com/docs-dev/docs-chat) repository
 :::
 ::: tab "TypeScript"
-The [docs-dev/feathers-chat-ts](https://github.com/docs-dev/feathers-chat-ts) repository
+The [docs-dev/docs-chat-ts](https://github.com/docs-dev/docs-chat-ts) repository
 :::
 ::::
 

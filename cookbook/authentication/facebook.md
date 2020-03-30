@@ -97,7 +97,7 @@ module.exports = app => {
 :::
 ::: tab "TypeScript"
 ```ts
-import { Params } from '@docs-dev/feathers';
+import { Params } from '@docs-dev/docs';
 import { AuthenticationService, JWTStrategy } from '@docs-dev/authentication';
 import { OAuthStrategy, OAuthProfile } from '@docs-dev/authentication-oauth';
 import axios from 'axios';

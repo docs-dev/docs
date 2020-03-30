@@ -6,7 +6,7 @@ In order to connect to a Feathers server, a client creates [Services](./services
 
 Modules most relevant on the client are:
 
-- `@docs-dev/feathers` to initialize a new Feathers [application](./application.md)
+- `@docs-dev/docs` to initialize a new Feathers [application](./application.md)
 - [@docs-dev/rest-client](./client/rest.md) to connect to services through [REST HTTP](./express.md).
 - [@docs-dev/socketio-client](./client/socketio.md) to connect to services through [Socket.io](./socketio.md).
 - [@docs-dev/primus-client](./client/primus.md) to connect to services through [Primus](./primus.md).
@@ -23,14 +23,14 @@ This chapter describes how to set up Feathers as the client in Node, React Nativ
 To connect to a Feathers server in NodeJS, install the desired client connection library (here, `socket.io-client`), alongside the Feathers core library, and the connection-specific library:
 
 ```
-npm install @docs-dev/feathers @docs-dev/socketio-client socket.io-client --save
+npm install @docs-dev/docs @docs-dev/socketio-client socket.io-client --save
 ```
 
 Then initialize like this:
 
 ```js
 const io = require('socket.io-client');
-const feathers = require('@docs-dev/feathers');
+const feathers = require('@docs-dev/docs');
 const socketio = require('@docs-dev/socketio-client');
 
 const socket = io('http://api.my-feathers-server.com');
@@ -53,14 +53,14 @@ messageService.create({
 React Native usage is the same as for the [Node client](#node). Install the required packages into your [React Native](https://facebook.github.io/react-native/) project.
 
 ```bash
-$ npm install @docs-dev/feathers @docs-dev/socketio-client socket.io-client
+$ npm install @docs-dev/docs @docs-dev/socketio-client socket.io-client
 ```
 
 Then in the main application file:
 
 ```js
 import io from 'socket.io-client';
-import feathers from '@docs-dev/feathers';
+import feathers from '@docs-dev/docs';
 import socketio from '@docs-dev/socketio-client';
 
 const socket = io('http://api.my-feathers-server.com', {
@@ -134,7 +134,7 @@ As mentioned above, `node_modules/@docs-dev` and all its subfolders must be incl
 ## @docs-dev/client
 
 [![npm version](https://img.shields.io/npm/v/@docs-dev/client.svg?style=flat-square)](https://www.npmjs.com/package/@docs-dev/client)
-[![Changelog](https://img.shields.io/badge/changelog-.md-blue.svg?style=flat-square)](https://github.com/docs-dev/feathers/blob/master/packages/client/CHANGELOG.md)
+[![Changelog](https://img.shields.io/badge/changelog-.md-blue.svg?style=flat-square)](https://github.com/docs-dev/docs/blob/master/packages/client/CHANGELOG.md)
 
 ```
 $ npm install @docs-dev/client --save
@@ -144,7 +144,7 @@ $ npm install @docs-dev/client --save
 
 | Feathers module                   | @docs-dev/client      |
 |-----------------------------------|-------------------------|
-| @docs-dev/feathers              | feathers (default)      |
+| @docs-dev/docs              | feathers (default)      |
 | @docs-dev/errors                | feathers.errors         |
 | @docs-dev/rest-client           | feathers.rest           |
 | @docs-dev/socketio-client       | feathers.socketio       |
@@ -194,7 +194,7 @@ Below is an example of the scripts you would use to load `@docs-dev/client` from
 
 ```html
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/core-js/2.1.4/core.min.js"></script>
-<script src="//unpkg.com/@docs-dev/client@^3.0.0/dist/feathers.js"></script>
+<script src="//unpkg.com/@docs-dev/client@^3.0.0/dist/docs.js"></script>
 <script src="//unpkg.com/socket.io-client@1.7.3/dist/socket.io.js"></script>
 <script>
   // Socket.io is exposed as the `io` global.

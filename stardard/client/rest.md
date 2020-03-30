@@ -3,7 +3,7 @@
 ## @docs-dev/rest-client
 
 [![npm version](https://img.shields.io/npm/v/@docs-dev/client.svg?style=flat-square)](https://www.npmjs.com/package/@docs-dev/rest-client)
-[![Changelog](https://img.shields.io/badge/changelog-.md-blue.svg?style=flat-square)](https://github.com/docs-dev/feathers/blob/master/packages/rest-client/CHANGELOG.md)
+[![Changelog](https://img.shields.io/badge/changelog-.md-blue.svg?style=flat-square)](https://github.com/docs-dev/docs/blob/master/packages/rest-client/CHANGELOG.md)
 
 ```
 $ npm install @docs-dev/rest-client --save
@@ -29,7 +29,7 @@ REST client services can be initialized by loading `@docs-dev/rest-client` and i
 
 ::: tab "Modular"
 ``` javascript
-const feathers = require('@docs-dev/feathers');
+const feathers = require('@docs-dev/docs');
 const rest = require('@docs-dev/rest-client');
 
 const app = feathers();
@@ -38,12 +38,12 @@ const app = feathers();
 const restClient = rest();
 
 // Connect to a different URL
-const restClient = rest('http://feathers-api.com')
+const restClient = rest('http://docs-api.com')
 
 // Configure an AJAX library (see below) with that client 
 app.configure(restClient.fetch(window.fetch));
 
-// Connect to the `http://feathers-api.com/messages` service
+// Connect to the `http://docs-api.com/messages` service
 const messages = app.service('messages');
 ```
 :::
@@ -51,16 +51,16 @@ const messages = app.service('messages');
 ::: tab "@docs-dev/client"
 ``` html
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/core-js/2.1.4/core.min.js"></script>
-<script src="//unpkg.com/@docs-dev/client@^3.0.0/dist/feathers.js"></script>
+<script src="//unpkg.com/@docs-dev/client@^3.0.0/dist/docs.js"></script>
 <script>
   var app = feathers();
   // Connect to a different URL
-  var restClient = feathers.rest('http://feathers-api.com')
+  var restClient = feathers.rest('http://docs-api.com')
 
   // Configure an AJAX library (see below) with that client 
   app.configure(restClient.fetch(window.fetch));
 
-  // Connect to the `http://feathers-api.com/messages` service
+  // Connect to the `http://docs-api.com/messages` service
   const messages = app.service('messages');
 </script>
 ```
@@ -191,12 +191,12 @@ app.configure(restClient.fetch(window.fetch));
 It is possible to instantiate and use individual services pointing to different servers by calling `rest('server').<library>().service(name)`:
 
 ```js
-const feathers = require('@docs-dev/feathers');
+const feathers = require('@docs-dev/docs');
 const rest = require('@docs-dev/rest-client');
 
 const app = feathers();
 
-const client1 = rest('http://feathers-api.com').fetch(window.fetch);
+const client1 = rest('http://docs-api.com').fetch(window.fetch);
 const client2 = rest('http://other-feathers-api.com').fetch(window.fetch);
 
 // With additional options to e.g. set authentication information
@@ -206,10 +206,10 @@ const client2 = rest('http://other-feathers-api.com', {
   }
 }).fetch(window.fetch);
 
-// Configuring this will initialize default services for http://feathers-api.com
+// Configuring this will initialize default services for http://docs-api.com
 app.configure(client1);
 
-// Connect to the `http://feathers-api.com/messages` service
+// Connect to the `http://docs-api.com/messages` service
 const messages = app.service('messages');
 
 // Register /users service that points to http://other-feathers-api.com/users

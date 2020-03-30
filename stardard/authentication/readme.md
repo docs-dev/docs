@@ -12,4 +12,4 @@ It consists of the following core modules:
 - [oAuth authentication](./oauth.md) for GitHub, Facebook etc. authentication
 - [The authentication client](./client.md) to use Feathers authentication on the client.
 
-> *Important:* `@docs-dev/authentication` is an abstraction for different authentication mechanisms. It does not handle things like user verification or password reset functionality etc. This can be implemented manually, with the help of libraries like [feathers-authentication-management](https://github.com/feathers-plus/feathers-authentication-management) or a platform like [Auth0](https://auth0.com/).
+> *Important:* `@docs-dev/authentication` is an abstraction for different authentication mechanisms. It does not handle things like user verification or password reset functionality etc. This can be implemented manually, with the help of libraries like [feathers-authentication-management](https://github.com/docs-plus/docs-authentication-management) or a platform like [Auth0](https://auth0.com/).
